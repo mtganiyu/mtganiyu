@@ -2,7 +2,7 @@
   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-<title>MapID3ee0143d6bc7</title>
+<title>LineChartID3ee016fa6fb</title>
 <meta http-equiv="content-type" content="text/html;charset=utf-8" />
 <style type="text/css">
 body {
@@ -17,151 +17,160 @@ body {
 </style>
 </head>
 <body>
- <!-- Map generated in R 3.4.2 by googleVis 0.6.2 package -->
-<!-- Wed Nov 01 09:18:50 2017 -->
+ <!-- LineChart generated in R 3.4.2 by googleVis 0.6.2 package -->
+<!-- Wed Nov 01 13:25:09 2017 -->
 
 
 <!-- jsHeader -->
 <script type="text/javascript">
  
 // jsData 
-function gvisDataMapID3ee0143d6bc7 () {
+function gvisDataLineChartID3ee016fa6fb () {
 var data = new google.visualization.DataTable();
 var datajson =
 [
  [
--10,
--76,
-"Peru"
+"Peru",
+61000,
+54000
 ],
 [
--1,
-15,
-"Congo, Rep."
+"Congo",
+52000,
+70000
 ],
 [
-23,
--102,
-"Mexico"
+"Mexico",
+66000,
+71000
 ],
 [
-17,
--4,
-"Mali"
+"Mali",
+51000,
+91000
 ],
 [
-2.5,
-112.5,
-"Malaysia"
+"Malaysia",
+51000,
+96000
 ],
 [
-19,
--72.4167,
-"Haiti"
+"Haiti",
+110000,
+1e+05
 ],
 [
--22,
-24,
-"Botswana"
+"Botswana",
+82000,
+110000
 ],
 [
-7,
-21,
-"Central African Republic"
+"Central African Republic",
+68000,
+130000
 ],
 [
--2,
-30,
-"Rwanda"
+"Rwanda",
+70000,
+130000
 ],
 [
-13,
--2,
-"Burkina Faso"
+"Burkina Faso",
+120000,
+130000
 ],
 [
--10,
--55,
-"Brazil"
+"Brazil",
+170000,
+130000
 ],
 [
-6,
-12,
-"Cameroon"
+"Cameroon",
+87000,
+290000
 ],
 [
-15,
-100,
-"Thailand"
+"Thailand",
+170000,
+3e+05
 ],
 [
-8,
--2,
-"Ghana"
+"Ghana",
+190000,
+360000
 ],
 [
-8,
--5,
-"Cote d'Ivoire"
+"CÃ´te d'Ivoire",
+250000,
+370000
 ],
 [
-0,
-25,
-"Congo, Dem. Rep."
+"Congo, the Democratic Republic of the",
+430000,
+630000
 ],
 [
--15,
-30,
-"Zambia"
+"Zambia",
+4e+05,
+670000
 ],
 [
-8,
-38,
-"Ethiopia"
+"Ethiopia",
+490000,
+870000
 ],
 [
--13.5,
-34,
-"Malawi"
+"Malawi",
+550000,
+910000
 ],
 [
--18.25,
-35,
-"Mozambique"
+"Mozambique",
+260000,
+1e+06
 ] 
 ];
-data.addColumn('number','Latitude');
-data.addColumn('number','Longitude');
-data.addColumn('string','Country_Name');
+data.addColumn('string','Country');
+data.addColumn('number','YR2000');
+data.addColumn('number','YR2010');
 data.addRows(datajson);
 return(data);
 }
  
 // jsDrawChart
-function drawChartMapID3ee0143d6bc7() {
-var data = gvisDataMapID3ee0143d6bc7();
+function drawChartLineChartID3ee016fa6fb() {
+var data = gvisDataLineChartID3ee016fa6fb();
 var options = {};
-options["showTip"] = true;
-options["mapType"] = "normal";
-options["enableScrollWheel"] = true;
-options["icons"] = {'default': {'normal': 'http://icons.iconarchive.com/icons/icons-land/vista-map-markers/48/Map-Marker-Ball-Azure-icon.png',
-'selected': 'http://icons.iconarchive.com/icons/icons-land/vista-map-markers/48/Map-Marker-Ball-Right-Azure-icon.png'}};
+options["allowHtml"] = true;
 
 
-    var chart = new google.visualization.Map(
-    document.getElementById('MapID3ee0143d6bc7')
-    );
-    chart.draw(data,options);
+    chartLineChartID3ee016fa6fb = new google.visualization.ChartWrapper({
+    dataTable: data,       
+    chartType: 'LineChart',
+    containerId: 'LineChartID3ee016fa6fb',
+    options: options
+    });
+    chartLineChartID3ee016fa6fb.draw();
     
 
 }
-  
+
+  function openEditorLineChartID3ee016fa6fb() {
+  var editor = new google.visualization.ChartEditor();
+  google.visualization.events.addListener(editor, 'ok',
+  function() { 
+  chartLineChartID3ee016fa6fb = editor.getChartWrapper();  
+  chartLineChartID3ee016fa6fb.draw(document.getElementById('LineChartID3ee016fa6fb')); 
+  }); 
+  editor.openDialog(chartLineChartID3ee016fa6fb);
+  }
+    
  
 // jsDisplayChart
 (function() {
 var pkgs = window.__gvisPackages = window.__gvisPackages || [];
 var callbacks = window.__gvisCallbacks = window.__gvisCallbacks || [];
-var chartid = "map";
+var chartid = "charteditor";
   
 // Manually see if chartid is in pkgs (not all browsers support Array.indexOf)
 var i, newPackage = true;
@@ -173,9 +182,9 @@ if (newPackage)
   pkgs.push(chartid);
   
 // Add the drawChart function to the global list of callbacks
-callbacks.push(drawChartMapID3ee0143d6bc7);
+callbacks.push(drawChartLineChartID3ee016fa6fb);
 })();
-function displayChartMapID3ee0143d6bc7() {
+function displayChartLineChartID3ee016fa6fb() {
   var pkgs = window.__gvisPackages = window.__gvisPackages || [];
   var callbacks = window.__gvisCallbacks = window.__gvisCallbacks || [];
   window.clearTimeout(window.__gvisLoad);
@@ -199,18 +208,18 @@ callbacks.shift()();
 </script>
  
 <!-- jsChart -->  
-<script type="text/javascript" src="https://www.google.com/jsapi?callback=displayChartMapID3ee0143d6bc7"></script>
+<script type="text/javascript" src="https://www.google.com/jsapi?callback=displayChartLineChartID3ee016fa6fb"></script>
  
 <!-- divChart -->
-  
-<div id="MapID3ee0143d6bc7" 
+<input type='button' onclick='openEditorLineChartID3ee016fa6fb()' value='Edit me!'/>  
+<div id="LineChartID3ee016fa6fb" 
   style="width: 500; height: automatic;">
 </div>
- <div><span>Data: sq &#8226; Chart ID: <a href="Chart_MapID3ee0143d6bc7.html">MapID3ee0143d6bc7</a> &#8226; <a href="https://github.com/mages/googleVis">googleVis-0.6.2</a></span><br /> 
+ <div><span>Data: data &#8226; Chart ID: <a href="Chart_LineChartID3ee016fa6fb.html">LineChartID3ee016fa6fb</a> &#8226; <a href="https://github.com/mages/googleVis">googleVis-0.6.2</a></span><br /> 
 <!-- htmlFooter -->
 <span> 
   R version 3.4.2 (2017-09-28) 
-  &#8226; <a href="https://developers.google.com/terms/">Google Terms of Use</a> &#8226; <a href="https://google-developers.appspot.com/chart/interactive/docs/gallery/map">Documentation and Data Policy</a>
+  &#8226; <a href="https://developers.google.com/terms/">Google Terms of Use</a> &#8226; <a href="https://google-developers.appspot.com/chart/interactive/docs/gallery/linechart">Documentation and Data Policy</a>
 </span></div>
 </body>
 </html>
