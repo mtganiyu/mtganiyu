@@ -1,0 +1,347 @@
+<html>
+
+<head>
+<style type="text/css">
+.knitr .inline {
+  background-color: #f7f7f7;
+  border:solid 1px #B0B0B0;
+}
+.error {
+	font-weight: bold;
+	color: #FF0000;
+}
+.warning {
+	font-weight: bold;
+}
+.message {
+	font-style: italic;
+}
+.source, .output, .warning, .error, .message {
+	padding: 0 1em;
+  border:solid 1px #F7F7F7;
+}
+.source {
+  background-color: #f5f5f5;
+}
+.rimage .left {
+  text-align: left;
+}
+.rimage .right {
+  text-align: right;
+}
+.rimage .center {
+  text-align: center;
+}
+.hl.num {
+  color: #AF0F91;
+}
+.hl.str {
+  color: #317ECC;
+}
+.hl.com {
+  color: #AD95AF;
+  font-style: italic;
+}
+.hl.opt {
+  color: #000000;
+}
+.hl.std {
+  color: #585858;
+}
+.hl.kwa {
+  color: #295F94;
+  font-weight: bold;
+}
+.hl.kwb {
+  color: #B05A65;
+}
+.hl.kwc {
+  color: #55aa55;
+}
+.hl.kwd {
+  color: #BC5A65;
+  font-weight: bold;
+}
+</style>
+<title>MY Project Testing</title>
+</head>
+
+<body>
+
+<p>
+##Aim: 
+The goal of this project is to:
+
+*	Show the merit and demerit of visual analytics on data analysis, and how to improve it.
+*	Provide answer to the question, "Does demographics like Age, Sex, Location have impact on types of death, economic status?"
+*	Make the visualized image(s) tells the story in an unambiguous way, understandable, even to a layman!
+
+
+
+##Methodology:
+
+The project would lay more emphasis on the explanatory techniques. It will be used in making data presentation to the viewers in a more succinct way. I therefore plan to use the R programing language to explore and analysis the dataset.
+  
+The dataset to be used is the World Health Nutrition and Population Statistics from year 2010 to 2016 . This can be obtained from http://databank.worldbank.org/data/reports.aspx?source=health-nutrition-and-population-statistics#advancedDownloadOptions . 
+
+
+
+Load this libraries and dataset and lets get to work!</p>
+
+<div class="chunk" id="unnamed-chunk-1"><div class="rcode"><div class="source"><pre class="knitr r"><span class="hl kwd">suppressMessages</span><span class="hl std">(</span><span class="hl kwd">library</span><span class="hl std">(knitr))</span>
+<span class="hl kwd">suppressMessages</span><span class="hl std">(</span><span class="hl kwd">library</span><span class="hl std">(dplyr))</span>
+<span class="hl kwd">suppressMessages</span><span class="hl std">(</span><span class="hl kwd">library</span><span class="hl std">(ggplot2))</span>
+<span class="hl kwd">suppressMessages</span><span class="hl std">(</span><span class="hl kwd">library</span><span class="hl std">(plotly))</span>
+<span class="hl kwd">suppressMessages</span><span class="hl std">(</span><span class="hl kwd">library</span><span class="hl std">(sqldf))</span>
+<span class="hl kwd">suppressPackageStartupMessages</span><span class="hl std">(</span><span class="hl kwd">library</span><span class="hl std">(googleVis))</span>
+</pre></div>
+<div class="message"><pre class="knitr r">## Creating a generic function for 'toJSON' from package 'jsonlite' in package 'googleVis'
+</pre></div>
+<div class="source"><pre class="knitr r"><span class="hl std">df</span> <span class="hl kwb">&lt;-</span> <span class="hl kwd">read.csv</span><span class="hl std">(</span><span class="hl str">&quot;World_Health_2.csv&quot;</span><span class="hl std">,</span> <span class="hl kwc">header</span> <span class="hl std">=</span> <span class="hl num">TRUE</span><span class="hl std">,</span> <span class="hl kwc">sep</span> <span class="hl std">=</span> <span class="hl str">&quot;,&quot;</span><span class="hl std">,</span> <span class="hl kwc">stringsAsFactors</span> <span class="hl std">=</span> <span class="hl num">FALSE</span><span class="hl std">)</span>
+<span class="hl kwd">kable</span><span class="hl std">(</span><span class="hl kwd">head</span><span class="hl std">(df[</span><span class="hl num">200</span><span class="hl opt">:</span><span class="hl num">206</span><span class="hl std">, ]))</span>
+</pre></div>
+<table>
+ <thead>
+  <tr>
+   <th style="text-align:left;">   </th>
+   <th style="text-align:left;"> Series_Name </th>
+   <th style="text-align:left;"> Series_Code </th>
+   <th style="text-align:left;"> Country_Name </th>
+   <th style="text-align:left;"> Country_Code </th>
+   <th style="text-align:left;"> YR1960 </th>
+   <th style="text-align:left;"> YR1970 </th>
+   <th style="text-align:left;"> YR1980 </th>
+   <th style="text-align:left;"> YR1990 </th>
+   <th style="text-align:left;"> YR2000 </th>
+   <th style="text-align:left;"> YR2010 </th>
+   <th style="text-align:left;"> YR2015 </th>
+  </tr>
+ </thead>
+<tbody>
+  <tr>
+   <td style="text-align:left;"> 200 </td>
+   <td style="text-align:left;"> Children (ages 0-14) newly infected with HIV </td>
+   <td style="text-align:left;"> SH.HIV.INCD.14 </td>
+   <td style="text-align:left;"> Saudi Arabia </td>
+   <td style="text-align:left;"> SAU </td>
+   <td style="text-align:left;"> .. </td>
+   <td style="text-align:left;"> .. </td>
+   <td style="text-align:left;"> .. </td>
+   <td style="text-align:left;"> 100 </td>
+   <td style="text-align:left;"> 100 </td>
+   <td style="text-align:left;"> 100 </td>
+   <td style="text-align:left;"> 100 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> 201 </td>
+   <td style="text-align:left;"> Children (ages 0-14) newly infected with HIV </td>
+   <td style="text-align:left;"> SH.HIV.INCD.14 </td>
+   <td style="text-align:left;"> Senegal </td>
+   <td style="text-align:left;"> SEN </td>
+   <td style="text-align:left;"> .. </td>
+   <td style="text-align:left;"> .. </td>
+   <td style="text-align:left;"> .. </td>
+   <td style="text-align:left;"> 200 </td>
+   <td style="text-align:left;"> 1000 </td>
+   <td style="text-align:left;"> 1000 </td>
+   <td style="text-align:left;"> 500 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> 202 </td>
+   <td style="text-align:left;"> Children (ages 0-14) newly infected with HIV </td>
+   <td style="text-align:left;"> SH.HIV.INCD.14 </td>
+   <td style="text-align:left;"> Serbia </td>
+   <td style="text-align:left;"> SRB </td>
+   <td style="text-align:left;"> .. </td>
+   <td style="text-align:left;"> .. </td>
+   <td style="text-align:left;"> .. </td>
+   <td style="text-align:left;"> .. </td>
+   <td style="text-align:left;"> .. </td>
+   <td style="text-align:left;"> .. </td>
+   <td style="text-align:left;"> .. </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> 203 </td>
+   <td style="text-align:left;"> Children (ages 0-14) newly infected with HIV </td>
+   <td style="text-align:left;"> SH.HIV.INCD.14 </td>
+   <td style="text-align:left;"> Seychelles </td>
+   <td style="text-align:left;"> SYC </td>
+   <td style="text-align:left;"> .. </td>
+   <td style="text-align:left;"> .. </td>
+   <td style="text-align:left;"> .. </td>
+   <td style="text-align:left;"> .. </td>
+   <td style="text-align:left;"> .. </td>
+   <td style="text-align:left;"> .. </td>
+   <td style="text-align:left;"> .. </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> 204 </td>
+   <td style="text-align:left;"> Children (ages 0-14) newly infected with HIV </td>
+   <td style="text-align:left;"> SH.HIV.INCD.14 </td>
+   <td style="text-align:left;"> Sierra Leone </td>
+   <td style="text-align:left;"> SLE </td>
+   <td style="text-align:left;"> .. </td>
+   <td style="text-align:left;"> .. </td>
+   <td style="text-align:left;"> .. </td>
+   <td style="text-align:left;"> 200 </td>
+   <td style="text-align:left;"> 500 </td>
+   <td style="text-align:left;"> 1000 </td>
+   <td style="text-align:left;"> 500 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> 205 </td>
+   <td style="text-align:left;"> Children (ages 0-14) newly infected with HIV </td>
+   <td style="text-align:left;"> SH.HIV.INCD.14 </td>
+   <td style="text-align:left;"> Singapore </td>
+   <td style="text-align:left;"> SGP </td>
+   <td style="text-align:left;"> .. </td>
+   <td style="text-align:left;"> .. </td>
+   <td style="text-align:left;"> .. </td>
+   <td style="text-align:left;"> .. </td>
+   <td style="text-align:left;"> .. </td>
+   <td style="text-align:left;"> .. </td>
+   <td style="text-align:left;"> .. </td>
+  </tr>
+</tbody>
+</table>
+
+</div></div>
+
+
+
+<div class="chunk" id="unnamed-chunk-2"><div class="rcode"><div class="source"><pre class="knitr r"><span class="hl std">lat_long</span> <span class="hl kwb">&lt;-</span> <span class="hl kwd">read.csv</span><span class="hl std">(</span><span class="hl str">&quot;Countries_long_lat2.csv&quot;</span><span class="hl std">,</span> <span class="hl kwc">header</span> <span class="hl std">=</span> <span class="hl num">TRUE</span><span class="hl std">,</span> <span class="hl kwc">sep</span> <span class="hl std">=</span> <span class="hl str">&quot;,&quot;</span><span class="hl std">)</span>
+<span class="hl kwd">colnames</span><span class="hl std">(lat_long)</span> <span class="hl kwb">&lt;-</span> <span class="hl kwd">c</span><span class="hl std">(</span><span class="hl str">&quot;Country&quot;</span><span class="hl std">,</span> <span class="hl str">&quot;Country_Code&quot;</span><span class="hl std">,</span> <span class="hl str">&quot;Latitude&quot;</span><span class="hl std">,</span> <span class="hl str">&quot;Longtitude&quot;</span><span class="hl std">)</span>
+<span class="hl kwd">kable</span><span class="hl std">(</span><span class="hl kwd">head</span><span class="hl std">(lat_long))</span>
+</pre></div>
+<table>
+ <thead>
+  <tr>
+   <th style="text-align:left;"> Country </th>
+   <th style="text-align:left;"> Country_Code </th>
+   <th style="text-align:right;"> Latitude </th>
+   <th style="text-align:right;"> Longtitude </th>
+  </tr>
+ </thead>
+<tbody>
+  <tr>
+   <td style="text-align:left;"> Albania </td>
+   <td style="text-align:left;"> ALB </td>
+   <td style="text-align:right;"> 41.0000 </td>
+   <td style="text-align:right;"> 20.0000 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> Algeria </td>
+   <td style="text-align:left;"> DZA </td>
+   <td style="text-align:right;"> 28.0000 </td>
+   <td style="text-align:right;"> 3.0000 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> American Samoa </td>
+   <td style="text-align:left;"> ASM </td>
+   <td style="text-align:right;"> -14.3333 </td>
+   <td style="text-align:right;"> -170.0000 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> Andorra </td>
+   <td style="text-align:left;"> AND </td>
+   <td style="text-align:right;"> 42.5000 </td>
+   <td style="text-align:right;"> 1.6000 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> Angola </td>
+   <td style="text-align:left;"> AGO </td>
+   <td style="text-align:right;"> -12.5000 </td>
+   <td style="text-align:right;"> 18.5000 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> Anguilla </td>
+   <td style="text-align:left;"> AIA </td>
+   <td style="text-align:right;"> 18.2500 </td>
+   <td style="text-align:right;"> -63.1667 </td>
+  </tr>
+</tbody>
+</table>
+
+</div></div>
+
+
+<div class="chunk" id="unnamed-chunk-3"><div class="rcode"><div class="source"><pre class="knitr r"><span class="hl kwd">options</span><span class="hl std">(</span><span class="hl kwc">warn</span> <span class="hl std">=</span> <span class="hl opt">-</span><span class="hl num">1</span><span class="hl std">)</span>
+<span class="hl std">df2</span> <span class="hl kwb">&lt;-</span> <span class="hl kwd">merge</span><span class="hl std">(df, lat_long,</span> <span class="hl kwc">by.x</span> <span class="hl std">=</span> <span class="hl str">&quot;Country_Code&quot;</span><span class="hl std">,</span> <span class="hl kwc">by.y</span> <span class="hl std">=</span> <span class="hl str">&quot;Country_Code&quot;</span><span class="hl std">,</span> <span class="hl kwc">all</span> <span class="hl std">=</span> <span class="hl num">FALSE</span><span class="hl std">)</span>
+<span class="hl std">df2[,</span> <span class="hl num">5</span><span class="hl opt">:</span><span class="hl num">11</span><span class="hl std">]</span> <span class="hl kwb">&lt;-</span> <span class="hl kwd">sapply</span><span class="hl std">(df2[,</span> <span class="hl num">5</span><span class="hl opt">:</span><span class="hl num">11</span><span class="hl std">], as.numeric)</span>
+</pre></div>
+</div></div>
+
+
+<div class="chunk" id="unnamed-chunk-4"><div class="rcode"><div class="source"><pre class="knitr r"><span class="hl std">df2</span><span class="hl opt">$</span><span class="hl std">Lat_Long</span> <span class="hl kwb">=</span> <span class="hl kwd">paste</span><span class="hl std">(df2</span><span class="hl opt">$</span><span class="hl std">Latitude, df2</span><span class="hl opt">$</span><span class="hl std">Longtitude,</span> <span class="hl kwc">sep</span><span class="hl std">=</span><span class="hl str">&quot;:&quot;</span><span class="hl std">)</span>
+</pre></div>
+</div></div>
+
+
+<div class="chunk" id="unnamed-chunk-5"><div class="rcode"><div class="source"><pre class="knitr r"><span class="hl std">sq</span> <span class="hl kwb">&lt;-</span> <span class="hl kwd">sqldf</span><span class="hl std">(</span><span class="hl str">&quot;select Lat_Long, Country_Name, YR2000, YR2010 from df2 
+            where YR2010 &gt;= 50000 and YR2000 &gt;= 50000 and Series_Name ='Children orphaned by HIV/AIDS'
+            order by YR2010, YR2000 limit 20&quot;</span><span class="hl std">)</span>
+<span class="hl kwd">head</span><span class="hl std">(sq)</span>
+</pre></div>
+<div class="output"><pre class="knitr r">##      Lat_Long Country_Name YR2000 YR2010
+## 1     -10:-76         Peru  61000  54000
+## 2       -1:15  Congo, Rep.  52000  70000
+## 3     23:-102       Mexico  66000  71000
+## 4       17:-4         Mali  51000  91000
+## 5   2.5:112.5     Malaysia  51000  96000
+## 6 19:-72.4167        Haiti 110000 100000
+</pre></div>
+</div></div>
+
+
+<div class="chunk" id="unnamed-chunk-6"><div class="rcode"><div class="source"><pre class="knitr r"><span class="hl std">Show_map</span> <span class="hl kwb">&lt;-</span> <span class="hl kwd">gvisMap</span><span class="hl std">(sq,</span> <span class="hl str">&quot;Lat_Long&quot;</span> <span class="hl std">,</span> <span class="hl str">&quot;Country_Name&quot;</span><span class="hl std">,</span>
+              <span class="hl kwc">options</span><span class="hl std">=</span><span class="hl kwd">list</span><span class="hl std">(</span><span class="hl kwc">showTip</span><span class="hl std">=</span><span class="hl num">TRUE</span><span class="hl std">,</span> <span class="hl kwc">mapType</span><span class="hl std">=</span><span class="hl str">'normal'</span><span class="hl std">,</span>
+              <span class="hl kwc">enableScrollWheel</span><span class="hl std">=</span><span class="hl num">TRUE</span><span class="hl std">,</span>
+              <span class="hl kwc">icons</span><span class="hl std">=</span><span class="hl kwd">paste0</span><span class="hl std">(</span><span class="hl str">&quot;{&quot;</span><span class="hl std">,</span>
+              <span class="hl str">&quot;'default': {'normal': 'http://icons.iconarchive.com/&quot;</span><span class="hl std">,</span>
+              <span class="hl str">&quot;icons/icons-land/vista-map-markers/48/&quot;</span><span class="hl std">,</span>
+              <span class="hl str">&quot;Map-Marker-Ball-Azure-icon.png',\n&quot;</span><span class="hl std">,</span>
+              <span class="hl str">&quot;'selected': 'http://icons.iconarchive.com/&quot;</span><span class="hl std">,</span>
+              <span class="hl str">&quot;icons/icons-land/vista-map-markers/48/&quot;</span><span class="hl std">,</span>
+              <span class="hl str">&quot;Map-Marker-Ball-Right-Azure-icon.png'&quot;</span><span class="hl std">,</span>
+              <span class="hl str">&quot;}}&quot;</span><span class="hl std">)))</span>
+<span class="hl com">#print(Show_map, file=&quot;gvis1.html&quot;)                        </span>
+<span class="hl com">#print(Show_map)</span>
+<span class="hl std">Show_map</span><span class="hl opt">$</span><span class="hl std">html</span><span class="hl opt">$</span><span class="hl std">chart</span>
+</pre></div>
+<div class="output"><pre class="knitr r">##                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        jsHeader 
+##                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   &quot;&lt;!-- Map generated in R 3.4.2 by googleVis 0.6.2 package --&gt;\n&lt;!-- Wed Nov 01 10:00:47 2017 --&gt;\n\n\n&lt;!-- jsHeader --&gt;\n&lt;script type=\&quot;text/javascript\&quot;&gt;\n&quot; 
+##                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          jsData 
+##                                                                                                                                                                                                                                                                                                                                                                                                             &quot;\n// jsData \nfunction gvisDataMapID367472e82cd7 () {\nvar data = new google.visualization.DataTable();\nvar datajson =\n[\n [\n-10,\n-76,\n\&quot;Peru\&quot;\n],\n[\n-1,\n15,\n\&quot;Congo, Rep.\&quot;\n],\n[\n23,\n-102,\n\&quot;Mexico\&quot;\n],\n[\n17,\n-4,\n\&quot;Mali\&quot;\n],\n[\n2.5,\n112.5,\n\&quot;Malaysia\&quot;\n],\n[\n19,\n-72.4167,\n\&quot;Haiti\&quot;\n],\n[\n-22,\n24,\n\&quot;Botswana\&quot;\n],\n[\n7,\n21,\n\&quot;Central African Republic\&quot;\n],\n[\n-2,\n30,\n\&quot;Rwanda\&quot;\n],\n[\n13,\n-2,\n\&quot;Burkina Faso\&quot;\n],\n[\n-10,\n-55,\n\&quot;Brazil\&quot;\n],\n[\n6,\n12,\n\&quot;Cameroon\&quot;\n],\n[\n15,\n100,\n\&quot;Thailand\&quot;\n],\n[\n8,\n-2,\n\&quot;Ghana\&quot;\n],\n[\n8,\n-5,\n\&quot;Cote d'Ivoire\&quot;\n],\n[\n0,\n25,\n\&quot;Congo, Dem. Rep.\&quot;\n],\n[\n-15,\n30,\n\&quot;Zambia\&quot;\n],\n[\n8,\n38,\n\&quot;Ethiopia\&quot;\n],\n[\n-13.5,\n34,\n\&quot;Malawi\&quot;\n],\n[\n-18.25,\n35,\n\&quot;Mozambique\&quot;\n] \n];\ndata.addColumn('number','Latitude');\ndata.addColumn('number','Longitude');\ndata.addColumn('string','Country_Name');\ndata.addRows(datajson);\nreturn(data);\n}\n&quot; 
+##                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     jsDrawChart 
+##                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      &quot;\n// jsDrawChart\nfunction drawChartMapID367472e82cd7() {\nvar data = gvisDataMapID367472e82cd7();\nvar options = {};\noptions[\&quot;showTip\&quot;] = true;\noptions[\&quot;mapType\&quot;] = \&quot;normal\&quot;;\noptions[\&quot;enableScrollWheel\&quot;] = true;\noptions[\&quot;icons\&quot;] = {'default': {'normal': 'http://icons.iconarchive.com/icons/icons-land/vista-map-markers/48/Map-Marker-Ball-Azure-icon.png',\n'selected': 'http://icons.iconarchive.com/icons/icons-land/vista-map-markers/48/Map-Marker-Ball-Right-Azure-icon.png'}};\n\n\n    var chart = new google.visualization.Map(\n    document.getElementById('MapID367472e82cd7')\n    );\n    chart.draw(data,options);\n    \n\n}\n  \n&quot; 
+##                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  jsDisplayChart 
+## &quot;\n// jsDisplayChart\n(function() {\nvar pkgs = window.__gvisPackages = window.__gvisPackages || [];\nvar callbacks = window.__gvisCallbacks = window.__gvisCallbacks || [];\nvar chartid = \&quot;map\&quot;;\n  \n// Manually see if chartid is in pkgs (not all browsers support Array.indexOf)\nvar i, newPackage = true;\nfor (i = 0; newPackage &amp;&amp; i &lt; pkgs.length; i++) {\nif (pkgs[i] === chartid)\nnewPackage = false;\n}\nif (newPackage)\n  pkgs.push(chartid);\n  \n// Add the drawChart function to the global list of callbacks\ncallbacks.push(drawChartMapID367472e82cd7);\n})();\nfunction displayChartMapID367472e82cd7() {\n  var pkgs = window.__gvisPackages = window.__gvisPackages || [];\n  var callbacks = window.__gvisCallbacks = window.__gvisCallbacks || [];\n  window.clearTimeout(window.__gvisLoad);\n  // The timeout is set to 100 because otherwise the container div we are\n  // targeting might not be part of the document yet\n  window.__gvisLoad = setTimeout(function() {\n  var pkgCount = pkgs.length;\n  google.load(\&quot;visualization\&quot;, \&quot;1\&quot;, { packages:pkgs, callback: function() {\n  if (pkgCount != pkgs.length) {\n  // Race condition where another setTimeout call snuck in after us; if\n  // that call added a package, we must not shift its callback\n  return;\n}\nwhile (callbacks.length &gt; 0)\ncallbacks.shift()();\n} });\n}, 100);\n}\n&quot; 
+##                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        jsFooter 
+##                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    &quot;\n// jsFooter\n&lt;/script&gt;\n&quot; 
+##                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         jsChart 
+##                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                &quot;\n&lt;!-- jsChart --&gt;  \n&lt;script type=\&quot;text/javascript\&quot; src=\&quot;https://www.google.com/jsapi?callback=displayChartMapID367472e82cd7\&quot;&gt;&lt;/script&gt;\n&quot; 
+##                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        divChart 
+##                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                &quot;\n&lt;!-- divChart --&gt;\n  \n&lt;div id=\&quot;MapID367472e82cd7\&quot; \n  style=\&quot;width: 500; height: automatic;\&quot;&gt;\n&lt;/div&gt;\n&quot;
+</pre></div>
+</div></div>
+
+
+
+
+<div class="chunk" id="unnamed-chunk-7"><div class="rcode"><div class="source"><pre class="knitr r"><span class="hl std">g</span> <span class="hl kwb">&lt;-</span> <span class="hl kwd">ggplot</span><span class="hl std">(sq,</span> <span class="hl kwd">aes</span><span class="hl std">(YR2010, YR2000))</span> <span class="hl opt">+</span>
+  <span class="hl kwd">geom_line</span><span class="hl std">(</span><span class="hl kwd">aes</span><span class="hl std">(</span><span class="hl kwc">colour</span> <span class="hl std">= Country_Name))</span> <span class="hl opt">+</span>
+  <span class="hl kwd">labs</span><span class="hl std">(</span><span class="hl kwc">title</span> <span class="hl std">=</span> <span class="hl str">&quot;Top 20 Countries Where Children Orphaned by HIV/AIDS For YRS 2000 &amp; 2010 &quot;</span><span class="hl std">)</span> <span class="hl opt">+</span>
+  <span class="hl kwd">geom_smooth</span><span class="hl std">(</span><span class="hl kwc">se</span> <span class="hl std">=</span> <span class="hl num">TRUE</span><span class="hl std">)</span>
+
+<span class="hl kwd">print</span><span class="hl std">(</span><span class="hl kwd">ggplotly</span><span class="hl std">(g))</span>
+</pre></div>
+<div class="message"><pre class="knitr r">## `geom_smooth()` using method = 'loess' and formula 'y ~ x'
+</pre></div>
+</div></div>
+
+
+<p>You can also embed plots, for example:</p>
+
+
+</body>
+</html>
