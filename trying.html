@@ -308,221 +308,221 @@ Load this libraries and dataset and lets get to work!</p>
 <span class="hl kwd">print</span><span class="hl std">(Show_map)</span>
 </pre></div>
 <div class="output"><pre class="knitr r">## &lt;!DOCTYPE html PUBLIC &quot;-//W3C//DTD XHTML 1.0 Strict//EN&quot;
-##   &quot;http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd&quot;&gt;
-## &lt;html xmlns=&quot;http://www.w3.org/1999/xhtml&quot;&gt;
-## &lt;head&gt;
-## &lt;title&gt;MapID2ce47aa5690&lt;/title&gt;
-## &lt;meta http-equiv=&quot;content-type&quot; content=&quot;text/html;charset=utf-8&quot; /&gt;
-## &lt;style type=&quot;text/css&quot;&gt;
-## body {
-##   color: #444444;
-##   font-family: Arial,Helvetica,sans-serif;
-##   font-size: 75%;
-##   }
-##   a {
-##   color: #4D87C7;
-##   text-decoration: none;
-## }
-## &lt;/style&gt;
-## &lt;/head&gt;
-## &lt;body&gt;
-##  &lt;!-- Map generated in R 3.4.2 by googleVis 0.6.2 package --&gt;
-## &lt;!-- Wed Nov 01 10:05:26 2017 --&gt;
-## 
-## 
-## &lt;!-- jsHeader --&gt;
-## &lt;script type=&quot;text/javascript&quot;&gt;
-##  
-## // jsData 
-## function gvisDataMapID2ce47aa5690 () {
-## var data = new google.visualization.DataTable();
-## var datajson =
-## [
-##  [
-## -10,
-## -76,
-## &quot;Peru&quot;
-## ],
-## [
-## -1,
-## 15,
-## &quot;Congo, Rep.&quot;
-## ],
-## [
-## 23,
-## -102,
-## &quot;Mexico&quot;
-## ],
-## [
-## 17,
-## -4,
-## &quot;Mali&quot;
-## ],
-## [
-## 2.5,
-## 112.5,
-## &quot;Malaysia&quot;
-## ],
-## [
-## 19,
-## -72.4167,
-## &quot;Haiti&quot;
-## ],
-## [
-## -22,
-## 24,
-## &quot;Botswana&quot;
-## ],
-## [
-## 7,
-## 21,
-## &quot;Central African Republic&quot;
-## ],
-## [
-## -2,
-## 30,
-## &quot;Rwanda&quot;
-## ],
-## [
-## 13,
-## -2,
-## &quot;Burkina Faso&quot;
-## ],
-## [
-## -10,
-## -55,
-## &quot;Brazil&quot;
-## ],
-## [
-## 6,
-## 12,
-## &quot;Cameroon&quot;
-## ],
-## [
-## 15,
-## 100,
-## &quot;Thailand&quot;
-## ],
-## [
-## 8,
-## -2,
-## &quot;Ghana&quot;
-## ],
-## [
-## 8,
-## -5,
-## &quot;Cote d'Ivoire&quot;
-## ],
-## [
-## 0,
-## 25,
-## &quot;Congo, Dem. Rep.&quot;
-## ],
-## [
-## -15,
-## 30,
-## &quot;Zambia&quot;
-## ],
-## [
-## 8,
-## 38,
-## &quot;Ethiopia&quot;
-## ],
-## [
-## -13.5,
-## 34,
-## &quot;Malawi&quot;
-## ],
-## [
-## -18.25,
-## 35,
-## &quot;Mozambique&quot;
-## ] 
-## ];
-## data.addColumn('number','Latitude');
-## data.addColumn('number','Longitude');
-## data.addColumn('string','Country_Name');
-## data.addRows(datajson);
-## return(data);
-## }
-##  
-## // jsDrawChart
-## function drawChartMapID2ce47aa5690() {
-## var data = gvisDataMapID2ce47aa5690();
-## var options = {};
-## options[&quot;showTip&quot;] = true;
-## options[&quot;mapType&quot;] = &quot;normal&quot;;
-## options[&quot;enableScrollWheel&quot;] = true;
-## options[&quot;icons&quot;] = {'default': {'normal': 'http://icons.iconarchive.com/icons/icons-land/vista-map-markers/48/Map-Marker-Ball-Azure-icon.png',
-## 'selected': 'http://icons.iconarchive.com/icons/icons-land/vista-map-markers/48/Map-Marker-Ball-Right-Azure-icon.png'}};
-## 
-## 
-##     var chart = new google.visualization.Map(
-##     document.getElementById('MapID2ce47aa5690')
-##     );
-##     chart.draw(data,options);
-##     
-## 
-## }
-##   
-##  
-## // jsDisplayChart
-## (function() {
-## var pkgs = window.__gvisPackages = window.__gvisPackages || [];
-## var callbacks = window.__gvisCallbacks = window.__gvisCallbacks || [];
-## var chartid = &quot;map&quot;;
-##   
-## // Manually see if chartid is in pkgs (not all browsers support Array.indexOf)
-## var i, newPackage = true;
-## for (i = 0; newPackage &amp;&amp; i &lt; pkgs.length; i++) {
-## if (pkgs[i] === chartid)
-## newPackage = false;
-## }
-## if (newPackage)
-##   pkgs.push(chartid);
-##   
-## // Add the drawChart function to the global list of callbacks
-## callbacks.push(drawChartMapID2ce47aa5690);
-## })();
-## function displayChartMapID2ce47aa5690() {
-##   var pkgs = window.__gvisPackages = window.__gvisPackages || [];
-##   var callbacks = window.__gvisCallbacks = window.__gvisCallbacks || [];
-##   window.clearTimeout(window.__gvisLoad);
-##   // The timeout is set to 100 because otherwise the container div we are
-##   // targeting might not be part of the document yet
-##   window.__gvisLoad = setTimeout(function() {
-##   var pkgCount = pkgs.length;
-##   google.load(&quot;visualization&quot;, &quot;1&quot;, { packages:pkgs, callback: function() {
-##   if (pkgCount != pkgs.length) {
-##   // Race condition where another setTimeout call snuck in after us; if
-##   // that call added a package, we must not shift its callback
-##   return;
-## }
-## while (callbacks.length &gt; 0)
-## callbacks.shift()();
-## } });
-## }, 100);
-## }
-##  
-## // jsFooter
-## &lt;/script&gt;
-##  
-## &lt;!-- jsChart --&gt;  
-## &lt;script type=&quot;text/javascript&quot; src=&quot;https://www.google.com/jsapi?callback=displayChartMapID2ce47aa5690&quot;&gt;&lt;/script&gt;
-##  
-## &lt;!-- divChart --&gt;
-##   
-## &lt;div id=&quot;MapID2ce47aa5690&quot; 
-##   style=&quot;width: 500; height: automatic;&quot;&gt;
-## &lt;/div&gt;
-##  &lt;div&gt;&lt;span&gt;Data: sq &amp;#8226; Chart ID: &lt;a href=&quot;Chart_MapID2ce47aa5690.html&quot;&gt;MapID2ce47aa5690&lt;/a&gt; &amp;#8226; &lt;a href=&quot;https://github.com/mages/googleVis&quot;&gt;googleVis-0.6.2&lt;/a&gt;&lt;/span&gt;&lt;br /&gt; 
-## &lt;!-- htmlFooter --&gt;
-## &lt;span&gt; 
-##   R version 3.4.2 (2017-09-28) 
-##   &amp;#8226; &lt;a href=&quot;https://developers.google.com/terms/&quot;&gt;Google Terms of Use&lt;/a&gt; &amp;#8226; &lt;a href=&quot;https://google-developers.appspot.com/chart/interactive/docs/gallery/map&quot;&gt;Documentation and Data Policy&lt;/a&gt;
-## &lt;/span&gt;&lt;/div&gt;
-## &lt;/body&gt;
-## &lt;/html&gt;
+   &quot;http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd&quot;&gt;
+ &lt;html xmlns=&quot;http://www.w3.org/1999/xhtml&quot;&gt;
+ &lt;head&gt;
+ &lt;title&gt;MapID2ce47aa5690&lt;/title&gt;
+ &lt;meta http-equiv=&quot;content-type&quot; content=&quot;text/html;charset=utf-8&quot; /&gt;
+ &lt;style type=&quot;text/css&quot;&gt;
+ body {
+   color: #444444;
+   font-family: Arial,Helvetica,sans-serif;
+   font-size: 75%;
+   }
+   a {
+   color: #4D87C7;
+   text-decoration: none;
+ }
+ &lt;/style&gt;
+ &lt;/head&gt;
+ &lt;body&gt;
+  &lt;!-- Map generated in R 3.4.2 by googleVis 0.6.2 package --&gt;
+ &lt;!-- Wed Nov 01 10:05:26 2017 --&gt;
+ 
+ 
+ &lt;!-- jsHeader --&gt;
+ &lt;script type=&quot;text/javascript&quot;&gt;
+  
+ // jsData 
+ function gvisDataMapID2ce47aa5690 () {
+ var data = new google.visualization.DataTable();
+ var datajson =
+ [
+  [
+ -10,
+ -76,
+ &quot;Peru&quot;
+ ],
+ [
+ -1,
+ 15,
+ &quot;Congo, Rep.&quot;
+ ],
+ [
+ 23,
+ -102,
+ &quot;Mexico&quot;
+ ],
+ [
+ 17,
+ -4,
+ &quot;Mali&quot;
+ ],
+ [
+ 2.5,
+ 112.5,
+ &quot;Malaysia&quot;
+ ],
+ [
+ 19,
+ -72.4167,
+ &quot;Haiti&quot;
+ ],
+ [
+ -22,
+ 24,
+ &quot;Botswana&quot;
+ ],
+ [
+ 7,
+ 21,
+ &quot;Central African Republic&quot;
+ ],
+ [
+ -2,
+ 30,
+ &quot;Rwanda&quot;
+ ],
+ [
+ 13,
+ -2,
+ &quot;Burkina Faso&quot;
+ ],
+ [
+ -10,
+ -55,
+ &quot;Brazil&quot;
+ ],
+ [
+ 6,
+ 12,
+ &quot;Cameroon&quot;
+ ],
+ [
+ 15,
+ 100,
+ &quot;Thailand&quot;
+ ],
+ [
+ 8,
+ -2,
+ &quot;Ghana&quot;
+ ],
+ [
+ 8,
+ -5,
+ &quot;Cote d'Ivoire&quot;
+ ],
+ [
+ 0,
+ 25,
+ &quot;Congo, Dem. Rep.&quot;
+ ],
+ [
+ -15,
+ 30,
+ &quot;Zambia&quot;
+ ],
+ [
+ 8,
+ 38,
+ &quot;Ethiopia&quot;
+ ],
+ [
+ -13.5,
+ 34,
+ &quot;Malawi&quot;
+ ],
+ [
+ -18.25,
+ 35,
+ &quot;Mozambique&quot;
+ ] 
+ ];
+ data.addColumn('number','Latitude');
+ data.addColumn('number','Longitude');
+ data.addColumn('string','Country_Name');
+ data.addRows(datajson);
+ return(data);
+ }
+  
+ // jsDrawChart
+ function drawChartMapID2ce47aa5690() {
+ var data = gvisDataMapID2ce47aa5690();
+ var options = {};
+ options[&quot;showTip&quot;] = true;
+ options[&quot;mapType&quot;] = &quot;normal&quot;;
+ options[&quot;enableScrollWheel&quot;] = true;
+ options[&quot;icons&quot;] = {'default': {'normal': 'http://icons.iconarchive.com/icons/icons-land/vista-map-markers/48/Map-Marker-Ball-Azure-icon.png',
+ 'selected': 'http://icons.iconarchive.com/icons/icons-land/vista-map-markers/48/Map-Marker-Ball-Right-Azure-icon.png'}};
+ 
+ 
+     var chart = new google.visualization.Map(
+     document.getElementById('MapID2ce47aa5690')
+     );
+     chart.draw(data,options);
+     
+ 
+ }
+   
+  
+ // jsDisplayChart
+ (function() {
+ var pkgs = window.__gvisPackages = window.__gvisPackages || [];
+ var callbacks = window.__gvisCallbacks = window.__gvisCallbacks || [];
+ var chartid = &quot;map&quot;;
+   
+ // Manually see if chartid is in pkgs (not all browsers support Array.indexOf)
+ var i, newPackage = true;
+ for (i = 0; newPackage &amp;&amp; i &lt; pkgs.length; i++) {
+ if (pkgs[i] === chartid)
+ newPackage = false;
+ }
+ if (newPackage)
+   pkgs.push(chartid);
+   
+ // Add the drawChart function to the global list of callbacks
+ callbacks.push(drawChartMapID2ce47aa5690);
+ })();
+ function displayChartMapID2ce47aa5690() {
+   var pkgs = window.__gvisPackages = window.__gvisPackages || [];
+   var callbacks = window.__gvisCallbacks = window.__gvisCallbacks || [];
+   window.clearTimeout(window.__gvisLoad);
+   // The timeout is set to 100 because otherwise the container div we are
+   // targeting might not be part of the document yet
+   window.__gvisLoad = setTimeout(function() {
+   var pkgCount = pkgs.length;
+   google.load(&quot;visualization&quot;, &quot;1&quot;, { packages:pkgs, callback: function() {
+   if (pkgCount != pkgs.length) {
+   // Race condition where another setTimeout call snuck in after us; if
+   // that call added a package, we must not shift its callback
+   return;
+ }
+ while (callbacks.length &gt; 0)
+ callbacks.shift()();
+ } });
+ }, 100);
+ }
+  
+ // jsFooter
+ &lt;/script&gt;
+  
+ &lt;!-- jsChart --&gt;  
+ &lt;script type=&quot;text/javascript&quot; src=&quot;https://www.google.com/jsapi?callback=displayChartMapID2ce47aa5690&quot;&gt;&lt;/script&gt;
+  
+ &lt;!-- divChart --&gt;
+   
+ &lt;div id=&quot;MapID2ce47aa5690&quot; 
+   style=&quot;width: 500; height: automatic;&quot;&gt;
+ &lt;/div&gt;
+  &lt;div&gt;&lt;span&gt;Data: sq &amp;#8226; Chart ID: &lt;a href=&quot;Chart_MapID2ce47aa5690.html&quot;&gt;MapID2ce47aa5690&lt;/a&gt; &amp;#8226; &lt;a href=&quot;https://github.com/mages/googleVis&quot;&gt;googleVis-0.6.2&lt;/a&gt;&lt;/span&gt;&lt;br /&gt; 
+ &lt;!-- htmlFooter --&gt;
+ &lt;span&gt; 
+   R version 3.4.2 (2017-09-28) 
+   &amp;#8226; &lt;a href=&quot;https://developers.google.com/terms/&quot;&gt;Google Terms of Use&lt;/a&gt; &amp;#8226; &lt;a href=&quot;https://google-developers.appspot.com/chart/interactive/docs/gallery/map&quot;&gt;Documentation and Data Policy&lt;/a&gt;
+ &lt;/span&gt;&lt;/div&gt;
+ &lt;/body&gt;
+ &lt;/html&gt;
 </pre></div>
 <div class="source"><pre class="knitr r"><span class="hl com">#Show_map$html$chart</span>
 </pre></div>
