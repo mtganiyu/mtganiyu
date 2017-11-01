@@ -2,7 +2,7 @@
   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-<title>MotionChartID3ee070d259f</title>
+<title>MapID3ee01cc37237</title>
 <meta http-equiv="content-type" content="text/html;charset=utf-8" />
 <style type="text/css">
 body {
@@ -17,122 +17,139 @@ body {
 </style>
 </head>
 <body>
- <!-- MotionChart generated in R 3.4.2 by googleVis 0.6.2 package -->
-<!-- Wed Nov 01 09:05:02 2017 -->
+ <!-- Map generated in R 3.4.2 by googleVis 0.6.2 package -->
+<!-- Wed Nov 01 09:20:30 2017 -->
 
 
 <!-- jsHeader -->
 <script type="text/javascript">
  
 // jsData 
-function gvisDataMotionChartID3ee070d259f () {
+function gvisDataMapID3ee01cc37237 () {
 var data = new google.visualization.DataTable();
 var datajson =
 [
  [
-"Apples",
-2008,
-"West",
-98,
-78,
-20,
-"2008-12-31"
+-10,
+-76,
+"Peru"
 ],
 [
-"Apples",
-2009,
-"West",
-111,
-79,
-32,
-"2009-12-31"
-],
-[
-"Apples",
-2010,
-"West",
-89,
-76,
-13,
-"2010-12-31"
-],
-[
-"Oranges",
-2008,
-"East",
-96,
-81,
+-1,
 15,
-"2008-12-31"
+"Congo, Rep."
 ],
 [
-"Bananas",
-2008,
-"East",
-85,
-76,
-9,
-"2008-12-31"
+23,
+-102,
+"Mexico"
 ],
 [
-"Oranges",
-2009,
-"East",
-93,
-80,
-13,
-"2009-12-31"
+17,
+-4,
+"Mali"
 ],
 [
-"Bananas",
-2009,
-"East",
-94,
-78,
-16,
-"2009-12-31"
+2.5,
+112.5,
+"Malaysia"
 ],
 [
-"Oranges",
-2010,
-"East",
-98,
-91,
+19,
+-72.4167,
+"Haiti"
+],
+[
+-22,
+24,
+"Botswana"
+],
+[
 7,
-"2010-12-31"
+21,
+"Central African Republic"
 ],
 [
-"Bananas",
-2010,
-"East",
-81,
-71,
-10,
-"2010-12-31"
+-2,
+30,
+"Rwanda"
+],
+[
+13,
+-2,
+"Burkina Faso"
+],
+[
+-10,
+-55,
+"Brazil"
+],
+[
+6,
+12,
+"Cameroon"
+],
+[
+15,
+100,
+"Thailand"
+],
+[
+8,
+-2,
+"Ghana"
+],
+[
+8,
+-5,
+"Cote d'Ivoire"
+],
+[
+0,
+25,
+"Congo, Dem. Rep."
+],
+[
+-15,
+30,
+"Zambia"
+],
+[
+8,
+38,
+"Ethiopia"
+],
+[
+-13.5,
+34,
+"Malawi"
+],
+[
+-18.25,
+35,
+"Mozambique"
 ] 
 ];
-data.addColumn('string','Fruit');
-data.addColumn('number','Year');
-data.addColumn('string','Location');
-data.addColumn('number','Sales');
-data.addColumn('number','Expenses');
-data.addColumn('number','Profit');
-data.addColumn('string','Date');
+data.addColumn('number','Latitude');
+data.addColumn('number','Longitude');
+data.addColumn('string','Country_Name');
 data.addRows(datajson);
 return(data);
 }
  
 // jsDrawChart
-function drawChartMotionChartID3ee070d259f() {
-var data = gvisDataMotionChartID3ee070d259f();
+function drawChartMapID3ee01cc37237() {
+var data = gvisDataMapID3ee01cc37237();
 var options = {};
-options["width"] = 600;
-options["height"] = 500;
-options["state"] = "";
+options["showTip"] = true;
+options["mapType"] = "normal";
+options["enableScrollWheel"] = true;
+options["icons"] = {'default': {'normal': 'http://icons.iconarchive.com/icons/icons-land/vista-map-markers/48/Map-Marker-Ball-Azure-icon.png',
+'selected': 'http://icons.iconarchive.com/icons/icons-land/vista-map-markers/48/Map-Marker-Ball-Right-Azure-icon.png'}};
 
 
-    var chart = new google.visualization.MotionChart(
-    document.getElementById('MotionChartID3ee070d259f')
+    var chart = new google.visualization.Map(
+    document.getElementById('MapID3ee01cc37237')
     );
     chart.draw(data,options);
     
@@ -144,7 +161,7 @@ options["state"] = "";
 (function() {
 var pkgs = window.__gvisPackages = window.__gvisPackages || [];
 var callbacks = window.__gvisCallbacks = window.__gvisCallbacks || [];
-var chartid = "motionchart";
+var chartid = "map";
   
 // Manually see if chartid is in pkgs (not all browsers support Array.indexOf)
 var i, newPackage = true;
@@ -156,9 +173,9 @@ if (newPackage)
   pkgs.push(chartid);
   
 // Add the drawChart function to the global list of callbacks
-callbacks.push(drawChartMotionChartID3ee070d259f);
+callbacks.push(drawChartMapID3ee01cc37237);
 })();
-function displayChartMotionChartID3ee070d259f() {
+function displayChartMapID3ee01cc37237() {
   var pkgs = window.__gvisPackages = window.__gvisPackages || [];
   var callbacks = window.__gvisCallbacks = window.__gvisCallbacks || [];
   window.clearTimeout(window.__gvisLoad);
@@ -182,18 +199,18 @@ callbacks.shift()();
 </script>
  
 <!-- jsChart -->  
-<script type="text/javascript" src="https://www.google.com/jsapi?callback=displayChartMotionChartID3ee070d259f"></script>
+<script type="text/javascript" src="https://www.google.com/jsapi?callback=displayChartMapID3ee01cc37237"></script>
  
 <!-- divChart -->
   
-<div id="MotionChartID3ee070d259f" 
-  style="width: 600; height: 500;">
+<div id="MapID3ee01cc37237" 
+  style="width: 500; height: automatic;">
 </div>
- <div><span>Data: Fruits &#8226; Chart ID: <a href="Chart_MotionChartID3ee070d259f.html">MotionChartID3ee070d259f</a> &#8226; <a href="https://github.com/mages/googleVis">googleVis-0.6.2</a></span><br /> 
+ <div><span>Data: sq &#8226; Chart ID: <a href="Chart_MapID3ee01cc37237.html">MapID3ee01cc37237</a> &#8226; <a href="https://github.com/mages/googleVis">googleVis-0.6.2</a></span><br /> 
 <!-- htmlFooter -->
 <span> 
   R version 3.4.2 (2017-09-28) 
-  &#8226; <a href="https://developers.google.com/terms/">Google Terms of Use</a> &#8226; <a href="https://google-developers.appspot.com/chart/interactive/docs/gallery/motionchart">Documentation and Data Policy</a>
+  &#8226; <a href="https://developers.google.com/terms/">Google Terms of Use</a> &#8226; <a href="https://google-developers.appspot.com/chart/interactive/docs/gallery/map">Documentation and Data Policy</a>
 </span></div>
 </body>
 </html>
