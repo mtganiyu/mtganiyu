@@ -1,91 +1,114 @@
-<script type="text/javascript" src="http://www.google.com/jsapi">
-</script>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>MotionChartID3ee070d259f</title>
+<meta http-equiv="content-type" content="text/html;charset=utf-8" />
+<style type="text/css">
+body {
+  color: #444444;
+  font-family: Arial,Helvetica,sans-serif;
+  font-size: 75%;
+  }
+  a {
+  color: #4D87C7;
+  text-decoration: none;
+}
+</style>
+</head>
+<body>
+ <!-- MotionChart generated in R 3.4.2 by googleVis 0.6.2 package -->
+<!-- Wed Nov 01 09:05:02 2017 -->
+
+
+<!-- jsHeader -->
 <script type="text/javascript">
-google.load("visualization", "1", { packages:["motionchart"] });
-google.setOnLoadCallback(drawChart);
-function drawChart() {
+ 
+// jsData 
+function gvisDataMotionChartID3ee070d259f () {
 var data = new google.visualization.DataTable();
-var datajson = [
+var datajson =
+[
  [
- "Apples",
-  2008,
+"Apples",
+2008,
 "West",
-    98,
-    78,
-    20,
-"2008-12-31" 
+98,
+78,
+20,
+"2008-12-31"
 ],
 [
- "Apples",
-  2009,
+"Apples",
+2009,
 "West",
-   111,
-    79,
-    32,
-"2009-12-31" 
+111,
+79,
+32,
+"2009-12-31"
 ],
 [
- "Apples",
-  2010,
+"Apples",
+2010,
 "West",
-    89,
-    76,
-    13,
-"2010-12-31" 
+89,
+76,
+13,
+"2010-12-31"
 ],
 [
- "Oranges",
-  2008,
+"Oranges",
+2008,
 "East",
-    96,
-    81,
-    15,
-"2008-12-31" 
+96,
+81,
+15,
+"2008-12-31"
 ],
 [
- "Bananas",
-  2008,
+"Bananas",
+2008,
 "East",
-    85,
-    76,
-     9,
-"2008-12-31" 
+85,
+76,
+9,
+"2008-12-31"
 ],
 [
- "Oranges",
-  2009,
+"Oranges",
+2009,
 "East",
-    93,
-    80,
-    13,
-"2009-12-31" 
+93,
+80,
+13,
+"2009-12-31"
 ],
 [
- "Bananas",
-  2009,
+"Bananas",
+2009,
 "East",
-    94,
-    78,
-    16,
-"2009-12-31" 
+94,
+78,
+16,
+"2009-12-31"
 ],
 [
- "Oranges",
-  2010,
+"Oranges",
+2010,
 "East",
-    98,
-    91,
-     7,
-"2010-12-31" 
+98,
+91,
+7,
+"2010-12-31"
 ],
 [
- "Bananas",
-  2010,
+"Bananas",
+2010,
 "East",
-    81,
-    71,
-    10,
-"2010-12-31" 
+81,
+71,
+10,
+"2010-12-31"
 ] 
 ];
 data.addColumn('string','Fruit');
@@ -96,21 +119,81 @@ data.addColumn('number','Expenses');
 data.addColumn('number','Profit');
 data.addColumn('string','Date');
 data.addRows(datajson);
-var chart = new google.visualization.MotionChart(
-   document.getElementById('MotionChart_2011-01-10-21-41-52')
-);
-var options ={};
-options["width"] =    600;
-options["height"] =    500;
-chart.draw(data,options);
+return(data);
 }
+ 
+// jsDrawChart
+function drawChartMotionChartID3ee070d259f() {
+var data = gvisDataMotionChartID3ee070d259f();
+var options = {};
+options["width"] = 600;
+options["height"] = 500;
+options["state"] = "";
+
+
+    var chart = new google.visualization.MotionChart(
+    document.getElementById('MotionChartID3ee070d259f')
+    );
+    chart.draw(data,options);
+    
+
+}
+  
+ 
+// jsDisplayChart
+(function() {
+var pkgs = window.__gvisPackages = window.__gvisPackages || [];
+var callbacks = window.__gvisCallbacks = window.__gvisCallbacks || [];
+var chartid = "motionchart";
+  
+// Manually see if chartid is in pkgs (not all browsers support Array.indexOf)
+var i, newPackage = true;
+for (i = 0; newPackage && i < pkgs.length; i++) {
+if (pkgs[i] === chartid)
+newPackage = false;
+}
+if (newPackage)
+  pkgs.push(chartid);
+  
+// Add the drawChart function to the global list of callbacks
+callbacks.push(drawChartMotionChartID3ee070d259f);
+})();
+function displayChartMotionChartID3ee070d259f() {
+  var pkgs = window.__gvisPackages = window.__gvisPackages || [];
+  var callbacks = window.__gvisCallbacks = window.__gvisCallbacks || [];
+  window.clearTimeout(window.__gvisLoad);
+  // The timeout is set to 100 because otherwise the container div we are
+  // targeting might not be part of the document yet
+  window.__gvisLoad = setTimeout(function() {
+  var pkgCount = pkgs.length;
+  google.load("visualization", "1", { packages:pkgs, callback: function() {
+  if (pkgCount != pkgs.length) {
+  // Race condition where another setTimeout call snuck in after us; if
+  // that call added a package, we must not shift its callback
+  return;
+}
+while (callbacks.length > 0)
+callbacks.shift()();
+} });
+}, 100);
+}
+ 
+// jsFooter
 </script>
-<div id="MotionChart_2011-01-10-21-41-52" style="width: 600px; height: 500px;">
+ 
+<!-- jsChart -->  
+<script type="text/javascript" src="https://www.google.com/jsapi?callback=displayChartMotionChartID3ee070d259f"></script>
+ 
+<!-- divChart -->
+  
+<div id="MotionChartID3ee070d259f" 
+  style="width: 600; height: 500;">
 </div>
- Data: Fruits, Chart ID: MotionChart_2011-01-10-21-41-52
-<BR>
-R version 2.12.1 (2010-12-16),
-<a href="http://code.google.com/apis/visualization/terms.html">
-Google Terms of Use</a>
-<BR>
-<BR>
+ <div><span>Data: Fruits &#8226; Chart ID: <a href="Chart_MotionChartID3ee070d259f.html">MotionChartID3ee070d259f</a> &#8226; <a href="https://github.com/mages/googleVis">googleVis-0.6.2</a></span><br /> 
+<!-- htmlFooter -->
+<span> 
+  R version 3.4.2 (2017-09-28) 
+  &#8226; <a href="https://developers.google.com/terms/">Google Terms of Use</a> &#8226; <a href="https://google-developers.appspot.com/chart/interactive/docs/gallery/motionchart">Documentation and Data Policy</a>
+</span></div>
+</body>
+</html>
