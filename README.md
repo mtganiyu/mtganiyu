@@ -1,2 +1,0 @@
-# mtganiyu
-My Personal Website
