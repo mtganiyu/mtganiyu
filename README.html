@@ -1,8 +1,47 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
-  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+
+<head>
+<title>MY Project Testing</title>
+</head>
+
+<body>
+
+<p>
+##Aim: 
+The goal of this project is to:
+
+*	Show the merit and demerit of visual analytics on data analysis, and how to improve it.
+*	Provide answer to the question, "Does demographics like Age, Sex, Location have impact on types of death, economic status?"
+*	Make the visualized image(s) tells the story in an unambiguous way, understandable, even to a layman!
+
+
+
+##Methodology:
+
+The project would lay more emphasis on the explanatory techniques. It will be used in making data presentation to the viewers in a more succinct way. I therefore plan to use the R programing language to explore and analysis the dataset.
+  
+The dataset to be used is the World Health Nutrition and Population Statistics from year 2010 to 2016 . This can be obtained from http://databank.worldbank.org/data/reports.aspx?source=health-nutrition-and-population-statistics#advancedDownloadOptions . 
+
+
+
+Load this libraries and dataset and lets get to work!</p>
+<!--begin.rcode fig.width=7, fig.height=6
+
+suppressMessages(library(knitr))
+suppressMessages(library(dplyr))
+suppressMessages(library(ggplot2))
+suppressMessages(library(plotly))
+suppressMessages(library(sqldf))
+suppressPackageStartupMessages(library(googleVis))
+
+df <- read.csv("World_Health_2.csv", header = TRUE, sep = ",", stringsAsFactors = FALSE)
+kable(head(df[200:206, ]))
+
+end.rcode-->
+  
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-<title>MapID3ee01cc37237</title>
+<title>MapID3ee0143d6bc7</title>
 <meta http-equiv="content-type" content="text/html;charset=utf-8" />
 <style type="text/css">
 body {
@@ -18,14 +57,14 @@ body {
 </head>
 <body>
  <!-- Map generated in R 3.4.2 by googleVis 0.6.2 package -->
-<!-- Wed Nov 01 09:20:30 2017 -->
+<!-- Wed Nov 01 09:18:50 2017 -->
 
 
 <!-- jsHeader -->
 <script type="text/javascript">
  
 // jsData 
-function gvisDataMapID3ee01cc37237 () {
+function gvisDataMapID3ee0143d6bc7 () {
 var data = new google.visualization.DataTable();
 var datajson =
 [
@@ -138,8 +177,8 @@ return(data);
 }
  
 // jsDrawChart
-function drawChartMapID3ee01cc37237() {
-var data = gvisDataMapID3ee01cc37237();
+function drawChartMapID3ee0143d6bc7() {
+var data = gvisDataMapID3ee0143d6bc7();
 var options = {};
 options["showTip"] = true;
 options["mapType"] = "normal";
@@ -149,7 +188,7 @@ options["icons"] = {'default': {'normal': 'http://icons.iconarchive.com/icons/ic
 
 
     var chart = new google.visualization.Map(
-    document.getElementById('MapID3ee01cc37237')
+    document.getElementById('MapID3ee0143d6bc7')
     );
     chart.draw(data,options);
     
@@ -173,9 +212,9 @@ if (newPackage)
   pkgs.push(chartid);
   
 // Add the drawChart function to the global list of callbacks
-callbacks.push(drawChartMapID3ee01cc37237);
+callbacks.push(drawChartMapID3ee0143d6bc7);
 })();
-function displayChartMapID3ee01cc37237() {
+function displayChartMapID3ee0143d6bc7() {
   var pkgs = window.__gvisPackages = window.__gvisPackages || [];
   var callbacks = window.__gvisCallbacks = window.__gvisCallbacks || [];
   window.clearTimeout(window.__gvisLoad);
@@ -199,18 +238,25 @@ callbacks.shift()();
 </script>
  
 <!-- jsChart -->  
-<script type="text/javascript" src="https://www.google.com/jsapi?callback=displayChartMapID3ee01cc37237"></script>
+<script type="text/javascript" src="https://www.google.com/jsapi?callback=displayChartMapID3ee0143d6bc7"></script>
  
 <!-- divChart -->
   
-<div id="MapID3ee01cc37237" 
+<div id="MapID3ee0143d6bc7" 
   style="width: 500; height: automatic;">
 </div>
- <div><span>Data: sq &#8226; Chart ID: <a href="Chart_MapID3ee01cc37237.html">MapID3ee01cc37237</a> &#8226; <a href="https://github.com/mages/googleVis">googleVis-0.6.2</a></span><br /> 
+ <div><span>Data: sq &#8226; Chart ID: <a href="Chart_MapID3ee0143d6bc7.html">MapID3ee0143d6bc7</a> &#8226; <a href="https://github.com/mages/googleVis">googleVis-0.6.2</a></span><br /> 
 <!-- htmlFooter -->
 <span> 
   R version 3.4.2 (2017-09-28) 
   &#8226; <a href="https://developers.google.com/terms/">Google Terms of Use</a> &#8226; <a href="https://google-developers.appspot.com/chart/interactive/docs/gallery/map">Documentation and Data Policy</a>
 </span></div>
+  
+  
+
+  
+<p>You can also embed plots, for example:</p>
+
+
 </body>
 </html>
