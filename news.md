@@ -107,7 +107,7 @@ $(document).ready(function () {
 
 
 
-<h1 class="title toc-ignore">Untitled</h1>
+<h1 class="title toc-ignore">Testing: Data 608 Project Proposal</h1>
 <h4 class="author"><em>MUSA T. GANIYU</em></h4>
 <h4 class="date"><em>April 24, 2016</em></h4>
 
@@ -118,8 +118,8 @@ $(document).ready(function () {
 <h2>Aim:</h2>
 <p>The goal of this project is to:</p>
 <ul>
-<li>Does demographics like Age, Sex, Location have impact on types of death, economic status?</li>
-<li>Show the merit and demerit of visual analytics on data analysis, and how to improve it.</li>
+<li>Show the merit and demerit of visual analytics on data analysis, and how to improve it, and to ask</li>
+<li>Does demographics like Age, Sex, Location have impact on types of death, economic status?.</li>
 <li>Make the visualized image(s) tells the story in an unambiguous way, understandable, even to a layman!</li>
 </ul>
 </div>
