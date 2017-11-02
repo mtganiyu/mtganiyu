@@ -13,7 +13,8 @@
 
 
 <title>|IS 608 KNOWLEDGE AND VISUAL ANALYTICS - PROJECT PROPOSAL | Data Analytics</title>
-
+  <a href="/index.html"> Check This Out</a>
+  <h1>Welcome To My Website/>
 <style type="text/css">code{white-space: pre;}</style>
 <style type="text/css">
 div.sourceCode { overflow-x: auto; }
