@@ -1,0 +1,216 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>MapID3ee07d77344c</title>
+<meta http-equiv="content-type" content="text/html;charset=utf-8" />
+<style type="text/css">
+body {
+  color: #444444;
+  font-family: Arial,Helvetica,sans-serif;
+  font-size: 75%;
+  }
+  a {
+  color: #4D87C7;
+  text-decoration: none;
+}
+</style>
+</head>
+<body>
+ <!-- Map generated in R 3.4.2 by googleVis 0.6.2 package -->
+<!-- Thu Nov 02 13:25:17 2017 -->
+
+
+<!-- jsHeader -->
+<script type="text/javascript">
+ 
+// jsData 
+function gvisDataMapID3ee07d77344c () {
+var data = new google.visualization.DataTable();
+var datajson =
+[
+ [
+-10,
+-76,
+"Peru"
+],
+[
+-1,
+15,
+"Congo"
+],
+[
+23,
+-102,
+"Mexico"
+],
+[
+17,
+-4,
+"Mali"
+],
+[
+2.5,
+112.5,
+"Malaysia"
+],
+[
+19,
+-72.4167,
+"Haiti"
+],
+[
+-22,
+24,
+"Botswana"
+],
+[
+7,
+21,
+"Central African Republic"
+],
+[
+-2,
+30,
+"Rwanda"
+],
+[
+13,
+-2,
+"Burkina Faso"
+],
+[
+-10,
+-55,
+"Brazil"
+],
+[
+6,
+12,
+"Cameroon"
+],
+[
+15,
+100,
+"Thailand"
+],
+[
+8,
+-2,
+"Ghana"
+],
+[
+8,
+-5,
+"Côte d'Ivoire"
+],
+[
+0,
+25,
+"Congo, the Democratic Republic of the"
+],
+[
+-15,
+30,
+"Zambia"
+],
+[
+8,
+38,
+"Ethiopia"
+],
+[
+-13.5,
+34,
+"Malawi"
+],
+[
+-18.25,
+35,
+"Mozambique"
+] 
+];
+data.addColumn('number','Latitude');
+data.addColumn('number','Longitude');
+data.addColumn('string','Country');
+data.addRows(datajson);
+return(data);
+}
+ 
+// jsDrawChart
+function drawChartMapID3ee07d77344c() {
+var data = gvisDataMapID3ee07d77344c();
+var options = {};
+options["showTip"] = true;
+options["mapType"] = "normal";
+options["enableScrollWheel"] = true;
+options["icons"] = {'default': {'normal': 'http://icons.iconarchive.com/icons/icons-land/vista-map-markers/48/Map-Marker-Ball-Azure-icon.png',
+'selected': 'http://icons.iconarchive.com/icons/icons-land/vista-map-markers/48/Map-Marker-Ball-Right-Azure-icon.png'}};
+
+
+    var chart = new google.visualization.Map(
+    document.getElementById('MapID3ee07d77344c')
+    );
+    chart.draw(data,options);
+    
+
+}
+  
+ 
+// jsDisplayChart
+(function() {
+var pkgs = window.__gvisPackages = window.__gvisPackages || [];
+var callbacks = window.__gvisCallbacks = window.__gvisCallbacks || [];
+var chartid = "map";
+  
+// Manually see if chartid is in pkgs (not all browsers support Array.indexOf)
+var i, newPackage = true;
+for (i = 0; newPackage && i < pkgs.length; i++) {
+if (pkgs[i] === chartid)
+newPackage = false;
+}
+if (newPackage)
+  pkgs.push(chartid);
+  
+// Add the drawChart function to the global list of callbacks
+callbacks.push(drawChartMapID3ee07d77344c);
+})();
+function displayChartMapID3ee07d77344c() {
+  var pkgs = window.__gvisPackages = window.__gvisPackages || [];
+  var callbacks = window.__gvisCallbacks = window.__gvisCallbacks || [];
+  window.clearTimeout(window.__gvisLoad);
+  // The timeout is set to 100 because otherwise the container div we are
+  // targeting might not be part of the document yet
+  window.__gvisLoad = setTimeout(function() {
+  var pkgCount = pkgs.length;
+  google.load("visualization", "1", { packages:pkgs, callback: function() {
+  if (pkgCount != pkgs.length) {
+  // Race condition where another setTimeout call snuck in after us; if
+  // that call added a package, we must not shift its callback
+  return;
+}
+while (callbacks.length > 0)
+callbacks.shift()();
+} });
+}, 100);
+}
+ 
+// jsFooter
+</script>
+ 
+<!-- jsChart -->  
+<script type="text/javascript" src="https://www.google.com/jsapi?callback=displayChartMapID3ee07d77344c"></script>
+ 
+<!-- divChart -->
+  
+<div id="MapID3ee07d77344c" 
+  style="width: 500; height: automatic;">
+</div>
+ <div><span>Data: Twentyfirst_Cent &#8226; Chart ID: <a href="Chart_MapID3ee07d77344c.html">MapID3ee07d77344c</a> &#8226; <a href="https://github.com/mages/googleVis">googleVis-0.6.2</a></span><br /> 
+<!-- htmlFooter -->
+<span> 
+  R version 3.4.2 (2017-09-28) 
+  &#8226; <a href="https://developers.google.com/terms/">Google Terms of Use</a> &#8226; <a href="https://google-developers.appspot.com/chart/interactive/docs/gallery/map">Documentation and Data Policy</a>
+</span></div>
+</body>
+</html>
