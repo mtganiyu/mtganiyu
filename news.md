@@ -13,10 +13,10 @@
 
 
 <title>|IS 608 KNOWLEDGE AND VISUAL ANALYTICS - PROJECT PROPOSAL | Data Analytics</title>
-<a href="/index.html"> Check This Out</a>
-<h1>Welcome To My Website/>
 <style type="text/css">code{white-space: pre;}</style>
 <style type="text/css">
+  <a href="/index.html"> Main Page</a>
+  <h1>Welcome To My Website/>
 div.sourceCode { overflow-x: auto; }
 table.sourceCode, tr.sourceCode, td.lineNumbers, td.sourceCode {
   margin: 0; padding: 0; vertical-align: baseline; border: none; }
