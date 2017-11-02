@@ -7,16 +7,10 @@
 <meta charset="utf-8" />
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="generator" content="pandoc" />
-
-
 <meta name="author" content="Author:MUSA T GANIYU" />
-
-
 <title>|IS 608 KNOWLEDGE AND VISUAL ANALYTICS - PROJECT PROPOSAL | Data Analytics</title>
 <style type="text/css">code{white-space: pre;}</style>
 <style type="text/css">
-  <a href="/index.html"> Main Page</a>
-  <h1>Welcome To My Website/>
 div.sourceCode { overflow-x: auto; }
 table.sourceCode, tr.sourceCode, td.lineNumbers, td.sourceCode {
   margin: 0; padding: 0; vertical-align: baseline; border: none; }
@@ -229,7 +223,8 @@ div.tocify {
 
 <div class="fluid-row" id="header">
 
-
+<a href="/index.html"> Main Page</a>
+<h1>Welcome To My Website/>
 
 <h1 class="title toc-ignore"><p>|IS 608 KNOWLEDGE AND VISUAL ANALYTICS - PROJECT PROPOSAL | Data Analytics</p></h1>
 <h4 class="author"><em>Author:MUSA T GANIYU</em></h4>
