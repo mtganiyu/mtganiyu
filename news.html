@@ -450,6 +450,201 @@ df2[, <span class="dv">5</span>:<span class="dv">11</span>] &lt;-<span class="st
               <span class="st">&quot;}}&quot;</span>)))
 <span class="kw">print</span>(Show_map, <span class="dt">file=</span><span class="st">&quot;gvis1.html&quot;</span>)                        
 <span class="kw">plot</span>(Show_map)</code></pre></div>
+  
+ 
+<!-- jsHeader -->
+<script type="text/javascript">
+ 
+// jsData 
+function gvisDataMapID3ee020116ff () {
+var data = new google.visualization.DataTable();
+var datajson =
+[
+ [
+-10,
+-76,
+"Peru"
+],
+[
+-1,
+15,
+"Congo"
+],
+[
+23,
+-102,
+"Mexico"
+],
+[
+17,
+-4,
+"Mali"
+],
+[
+2.5,
+112.5,
+"Malaysia"
+],
+[
+19,
+-72.4167,
+"Haiti"
+],
+[
+-22,
+24,
+"Botswana"
+],
+[
+7,
+21,
+"Central African Republic"
+],
+[
+-2,
+30,
+"Rwanda"
+],
+[
+13,
+-2,
+"Burkina Faso"
+],
+[
+-10,
+-55,
+"Brazil"
+],
+[
+6,
+12,
+"Cameroon"
+],
+[
+15,
+100,
+"Thailand"
+],
+[
+8,
+-2,
+"Ghana"
+],
+[
+8,
+-5,
+"CÃ´te d'Ivoire"
+],
+[
+0,
+25,
+"Congo, the Democratic Republic of the"
+],
+[
+-15,
+30,
+"Zambia"
+],
+[
+8,
+38,
+"Ethiopia"
+],
+[
+-13.5,
+34,
+"Malawi"
+],
+[
+-18.25,
+35,
+"Mozambique"
+] 
+];
+data.addColumn('number','Latitude');
+data.addColumn('number','Longitude');
+data.addColumn('string','Country');
+data.addRows(datajson);
+return(data);
+}
+ 
+// jsDrawChart
+function drawChartMapID3ee020116ff() {
+var data = gvisDataMapID3ee020116ff();
+var options = {};
+options["showTip"] = true;
+options["mapType"] = "normal";
+options["enableScrollWheel"] = true;
+options["icons"] = {'default': {'normal': 'http://icons.iconarchive.com/icons/icons-land/vista-map-markers/48/Map-Marker-Ball-Azure-icon.png',
+'selected': 'http://icons.iconarchive.com/icons/icons-land/vista-map-markers/48/Map-Marker-Ball-Right-Azure-icon.png'}};
+
+
+    var chart = new google.visualization.Map(
+    document.getElementById('MapID3ee020116ff')
+    );
+    chart.draw(data,options);
+    
+
+}
+  
+ 
+// jsDisplayChart
+(function() {
+var pkgs = window.__gvisPackages = window.__gvisPackages || [];
+var callbacks = window.__gvisCallbacks = window.__gvisCallbacks || [];
+var chartid = "map";
+  
+// Manually see if chartid is in pkgs (not all browsers support Array.indexOf)
+var i, newPackage = true;
+for (i = 0; newPackage && i < pkgs.length; i++) {
+if (pkgs[i] === chartid)
+newPackage = false;
+}
+if (newPackage)
+  pkgs.push(chartid);
+  
+// Add the drawChart function to the global list of callbacks
+callbacks.push(drawChartMapID3ee020116ff);
+})();
+function displayChartMapID3ee020116ff() {
+  var pkgs = window.__gvisPackages = window.__gvisPackages || [];
+  var callbacks = window.__gvisCallbacks = window.__gvisCallbacks || [];
+  window.clearTimeout(window.__gvisLoad);
+  // The timeout is set to 100 because otherwise the container div we are
+  // targeting might not be part of the document yet
+  window.__gvisLoad = setTimeout(function() {
+  var pkgCount = pkgs.length;
+  google.load("visualization", "1", { packages:pkgs, callback: function() {
+  if (pkgCount != pkgs.length) {
+  // Race condition where another setTimeout call snuck in after us; if
+  // that call added a package, we must not shift its callback
+  return;
+}
+while (callbacks.length > 0)
+callbacks.shift()();
+} });
+}, 100);
+}
+ 
+// jsFooter
+</script>
+ 
+<!-- jsChart -->  
+<script type="text/javascript" src="https://www.google.com/jsapi?callback=displayChartMapID3ee020116ff"></script>
+ 
+<!-- divChart -->
+  
+<div id="MapID3ee020116ff" 
+  style="width: 500; height: automatic;">
+</div>
+ <div><span>Data: Twentyfirst_Cent &#8226; Chart ID: <a href="Chart_MapID3ee020116ff.html">MapID3ee020116ff</a> &#8226; <a href="https://github.com/mages/googleVis">googleVis-0.6.2</a></span><br /> 
+<!-- htmlFooter -->
+<span> 
+  R version 3.4.2 (2017-09-28) 
+  &#8226; <a href="https://developers.google.com/terms/">Google Terms of Use</a> &#8226; <a href="https://google-developers.appspot.com/chart/interactive/docs/gallery/map">Documentation and Data Policy</a>
+</span></div>
+
+ 
 <pre><code>## starting httpd help server ... done</code></pre>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">browseURL</span>(<span class="st">&quot;gvis1.html&quot;</span>)</code></pre></div>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">g &lt;-<span class="st"> </span><span class="kw">ggplot</span>(sq, <span class="kw">aes</span>(YR2010, YR2000)) +
