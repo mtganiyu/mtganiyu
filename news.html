@@ -691,6 +691,258 @@ Twentyfirst_Cent &lt;-<span class="st"> </span><span class="kw">sqldf</span>(<sp
 <blockquote>
 <p>Twenty First century coutries that are still battling with HIV/AIDS related deaths.</p>
 </blockquote>
+  
+<title>LK</title>
+<meta http-equiv="content-type" content="text/html;charset=utf-8" />
+<style type="text/css">
+body {
+  color: #444444;
+  font-family: Arial,Helvetica,sans-serif;
+  font-size: 75%;
+  }
+  a {
+  color: #4D87C7;
+  text-decoration: none;
+}
+</style>
+</head>
+<body>
+ <!-- LineChart generated in R 3.4.2 by googleVis 0.6.2 package -->
+<!-- Sat Nov 04 20:45:19 2017 -->
+
+
+<!-- jsHeader -->
+<script type="text/javascript">
+ 
+// jsData 
+function gvisDataLK () {
+var data = new google.visualization.DataTable();
+var datajson =
+[
+ [
+"Peru",
+61000,
+54000,
+34000
+],
+[
+"Congo",
+52000,
+70000,
+58000
+],
+[
+"Mexico",
+66000,
+71000,
+60000
+],
+[
+"Mali",
+51000,
+91000,
+88000
+],
+[
+"Malaysia",
+51000,
+96000,
+80000
+],
+[
+"Haiti",
+110000,
+1e+05,
+72000
+],
+[
+"Botswana",
+82000,
+110000,
+75000
+],
+[
+"Central African Republic",
+68000,
+130000,
+110000
+],
+[
+"Rwanda",
+70000,
+130000,
+91000
+],
+[
+"Burkina Faso",
+120000,
+130000,
+86000
+],
+[
+"Brazil",
+170000,
+130000,
+110000
+],
+[
+"Cameroon",
+87000,
+290000,
+330000
+],
+[
+"Thailand",
+170000,
+3e+05,
+2e+05
+],
+[
+"Ghana",
+190000,
+360000,
+280000
+],
+[
+"CÃ´te d'Ivoire",
+250000,
+370000,
+320000
+],
+[
+"Congo, the Democratic Republic of the",
+430000,
+630000,
+550000
+],
+[
+"Zambia",
+4e+05,
+670000,
+490000
+],
+[
+"Ethiopia",
+490000,
+870000,
+560000
+],
+[
+"Malawi",
+550000,
+910000,
+720000
+],
+[
+"Mozambique",
+260000,
+1e+06,
+1200000
+] 
+];
+data.addColumn('string','Country');
+data.addColumn('number','YR2000');
+data.addColumn('number','YR2010');
+data.addColumn('number','YR2015');
+data.addRows(datajson);
+return(data);
+}
+ 
+// jsDrawChart
+function drawChartLK() {
+var data = gvisDataLK();
+var options = {};
+options["allowHtml"] = true;
+options["title"] = "20th & 21th Century Countries Where  Most Children Are Losing Their Parent To HIV/AIDS";
+options["titleTextStyle"] = {color:'red',fontName:'Courier',fontSize:16};
+options["curveType"] = "function";
+
+
+    chartLK = new google.visualization.ChartWrapper({
+    dataTable: data,       
+    chartType: 'LineChart',
+    containerId: 'LK',
+    options: options
+    });
+    chartLK.draw();
+    
+
+}
+
+  function openEditorLK() {
+  var editor = new google.visualization.ChartEditor();
+  google.visualization.events.addListener(editor, 'ok',
+  function() { 
+  chartLK = editor.getChartWrapper();  
+  chartLK.draw(document.getElementById('LK')); 
+  }); 
+  editor.openDialog(chartLK);
+  }
+    
+ 
+// jsDisplayChart
+(function() {
+var pkgs = window.__gvisPackages = window.__gvisPackages || [];
+var callbacks = window.__gvisCallbacks = window.__gvisCallbacks || [];
+var chartid = "charteditor";
+  
+// Manually see if chartid is in pkgs (not all browsers support Array.indexOf)
+var i, newPackage = true;
+for (i = 0; newPackage && i < pkgs.length; i++) {
+if (pkgs[i] === chartid)
+newPackage = false;
+}
+if (newPackage)
+  pkgs.push(chartid);
+  
+// Add the drawChart function to the global list of callbacks
+callbacks.push(drawChartLK);
+})();
+function displayChartLK() {
+  var pkgs = window.__gvisPackages = window.__gvisPackages || [];
+  var callbacks = window.__gvisCallbacks = window.__gvisCallbacks || [];
+  window.clearTimeout(window.__gvisLoad);
+  // The timeout is set to 100 because otherwise the container div we are
+  // targeting might not be part of the document yet
+  window.__gvisLoad = setTimeout(function() {
+  var pkgCount = pkgs.length;
+  google.load("visualization", "1", { packages:pkgs, callback: function() {
+  if (pkgCount != pkgs.length) {
+  // Race condition where another setTimeout call snuck in after us; if
+  // that call added a package, we must not shift its callback
+  return;
+}
+while (callbacks.length > 0)
+callbacks.shift()();
+} });
+}, 100);
+}
+ 
+// jsFooter
+</script>
+ 
+<!-- jsChart -->  
+<script type="text/javascript" src="https://www.google.com/jsapi?callback=displayChartLK"></script>
+ 
+<!-- divChart -->
+<input type='button' onclick='openEditorLK()' value='Click Here To Edit The Chart!'/>  
+<div id="LK" 
+  style="width: 500; height: automatic;">
+</div>
+ <div><span>Data: data &#8226; Chart ID: <a href="Chart_LK.html">LK</a> &#8226; <a href="https://github.com/mages/googleVis">googleVis-0.6.2</a></span><br /> 
+<!-- htmlFooter -->
+<span> 
+  R version 3.4.2 (2017-09-28) 
+  &#8226; <a href="https://developers.google.com/terms/">Google Terms of Use</a> &#8226; <a href="https://google-developers.appspot.com/chart/interactive/docs/gallery/linechart">Documentation and Data Policy</a>
+</span></div>
+</script>
+    
+<script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAVGN-KdIArAlg5PbmLLB5uEDHHRrWXWeM&callback=initMap">
+    
+</script>
+  
+
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">Show_map1 &lt;-<span class="st"> </span><span class="kw">gvisMap</span>(Twentyfirst_Cent, <span class="st">&quot;Lat_Long&quot;</span> , <span class="st">&quot;Country&quot;</span>,
               <span class="dt">options=</span><span class="kw">list</span>(<span class="dt">showTip=</span><span class="ot">TRUE</span>, <span class="dt">mapType=</span><span class="st">'normal'</span>,
               <span class="dt">enableScrollWheel=</span><span class="ot">TRUE</span>,
@@ -703,17 +955,766 @@ Twentyfirst_Cent &lt;-<span class="st"> </span><span class="kw">sqldf</span>(<sp
               <span class="st">&quot;Map-Marker-Ball-Right-Azure-icon.png'&quot;</span>,
               <span class="st">&quot;}}&quot;</span>)), <span class="dt">chartid=</span><span class="st">&quot;BG&quot;</span>)
 <span class="kw">plot</span>(Show_map1)</code></pre></div>
+  
+ <title>BG</title>
+<meta http-equiv="content-type" content="text/html;charset=utf-8" />
+<style type="text/css">
+body {
+  color: #444444;
+  font-family: Arial,Helvetica,sans-serif;
+  font-size: 75%;
+  }
+  a {
+  color: #4D87C7;
+  text-decoration: none;
+}
+</style>
+</head>
+<body>
+ <!-- Map generated in R 3.4.2 by googleVis 0.6.2 package -->
+<!-- Sat Nov 04 20:42:40 2017 -->
+
+
+<!-- jsHeader -->
+<script type="text/javascript">
+ 
+// jsData 
+function gvisDataBG () {
+var data = new google.visualization.DataTable();
+var datajson =
+[
+ [
+-10,
+-76,
+"Peru"
+],
+[
+-1,
+15,
+"Congo"
+],
+[
+23,
+-102,
+"Mexico"
+],
+[
+17,
+-4,
+"Mali"
+],
+[
+2.5,
+112.5,
+"Malaysia"
+],
+[
+19,
+-72.4167,
+"Haiti"
+],
+[
+-22,
+24,
+"Botswana"
+],
+[
+7,
+21,
+"Central African Republic"
+],
+[
+-2,
+30,
+"Rwanda"
+],
+[
+13,
+-2,
+"Burkina Faso"
+],
+[
+-10,
+-55,
+"Brazil"
+],
+[
+6,
+12,
+"Cameroon"
+],
+[
+15,
+100,
+"Thailand"
+],
+[
+8,
+-2,
+"Ghana"
+],
+[
+8,
+-5,
+"CÃ´te d'Ivoire"
+],
+[
+0,
+25,
+"Congo, the Democratic Republic of the"
+],
+[
+-15,
+30,
+"Zambia"
+],
+[
+8,
+38,
+"Ethiopia"
+],
+[
+-13.5,
+34,
+"Malawi"
+],
+[
+-18.25,
+35,
+"Mozambique"
+] 
+];
+data.addColumn('number','Latitude');
+data.addColumn('number','Longitude');
+data.addColumn('string','Country');
+data.addRows(datajson);
+return(data);
+}
+ 
+// jsDrawChart
+function drawChartBG() {
+var data = gvisDataBG();
+var options = {};
+options["showTip"] = true;
+options["mapType"] = "normal";
+options["enableScrollWheel"] = true;
+options["icons"] = {'default': {'normal': 'http://icons.iconarchive.com/icons/icons-land/vista-map-markers/48/Map-Marker-Ball-Azure-icon.png',
+'selected': 'http://icons.iconarchive.com/icons/icons-land/vista-map-markers/48/Map-Marker-Ball-Right-Azure-icon.png'}};
+
+
+    var chart = new google.visualization.Map(
+    document.getElementById('BG')
+    );
+    chart.draw(data,options);
+    
+
+}
+  
+ 
+// jsDisplayChart
+(function() {
+var pkgs = window.__gvisPackages = window.__gvisPackages || [];
+var callbacks = window.__gvisCallbacks = window.__gvisCallbacks || [];
+var chartid = "map";
+  
+// Manually see if chartid is in pkgs (not all browsers support Array.indexOf)
+var i, newPackage = true;
+for (i = 0; newPackage && i < pkgs.length; i++) {
+if (pkgs[i] === chartid)
+newPackage = false;
+}
+if (newPackage)
+  pkgs.push(chartid);
+  
+// Add the drawChart function to the global list of callbacks
+callbacks.push(drawChartBG);
+})();
+function displayChartBG() {
+  var pkgs = window.__gvisPackages = window.__gvisPackages || [];
+  var callbacks = window.__gvisCallbacks = window.__gvisCallbacks || [];
+  window.clearTimeout(window.__gvisLoad);
+  // The timeout is set to 100 because otherwise the container div we are
+  // targeting might not be part of the document yet
+  window.__gvisLoad = setTimeout(function() {
+  var pkgCount = pkgs.length;
+  google.load("visualization", "1", { packages:pkgs, callback: function() {
+  if (pkgCount != pkgs.length) {
+  // Race condition where another setTimeout call snuck in after us; if
+  // that call added a package, we must not shift its callback
+  return;
+}
+while (callbacks.length > 0)
+callbacks.shift()();
+} });
+}, 100);
+}
+ 
+// jsFooter
+</script>
+ 
+<!-- jsChart -->  
+<script type="text/javascript" src="https://www.google.com/jsapi?callback=displayChartBG"></script>
+ 
+<!-- divChart -->
+  
+<div id="BG" 
+  style="width: 500; height: automatic;">
+</div>
+ <div><span>Data: Twentyfirst_Cent &#8226; Chart ID: <a href="Chart_BG.html">BG</a> &#8226; <a href="https://github.com/mages/googleVis">googleVis-0.6.2</a></span><br /> 
+<!-- htmlFooter -->
+<span> 
+  R version 3.4.2 (2017-09-28) 
+  &#8226; <a href="https://developers.google.com/terms/">Google Terms of Use</a> &#8226; <a href="https://google-developers.appspot.com/chart/interactive/docs/gallery/map">Documentation and Data Policy</a>
+</span></div>
+  
+</script>
+    
+    <script async defer
+    
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAVGN-KdIArAlg5PbmLLB5uEDHHRrWXWeM&callback=initMap">
+    
+</script>
+  
 <pre><code>## starting httpd help server ... done</code></pre>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co">#you may also try this!</span>
 <span class="co">#Show_map$html$chart</span></code></pre></div>
 <blockquote>
 <p>A better way to see for youself!</p>
+  
+<title>EQ</title>
+<meta http-equiv="content-type" content="text/html;charset=utf-8" />
+<style type="text/css">
+body {
+  color: #444444;
+  font-family: Arial,Helvetica,sans-serif;
+  font-size: 75%;
+  }
+  a {
+  color: #4D87C7;
+  text-decoration: none;
+}
+</style>
+</head>
+<body>
+ <!-- GeoChart generated in R 3.4.2 by googleVis 0.6.2 package -->
+<!-- Sat Nov 04 20:44:21 2017 -->
+
+
+<!-- jsHeader -->
+<script type="text/javascript">
+ 
+// jsData 
+function gvisDataEQ () {
+var data = new google.visualization.DataTable();
+var datajson =
+[
+ [
+-10,
+-76,
+"Peru",
+61000,
+34000
+],
+[
+-1,
+15,
+"Congo",
+52000,
+58000
+],
+[
+23,
+-102,
+"Mexico",
+66000,
+60000
+],
+[
+17,
+-4,
+"Mali",
+51000,
+88000
+],
+[
+2.5,
+112.5,
+"Malaysia",
+51000,
+80000
+],
+[
+19,
+-72.4167,
+"Haiti",
+110000,
+72000
+],
+[
+-22,
+24,
+"Botswana",
+82000,
+75000
+],
+[
+7,
+21,
+"Central African Republic",
+68000,
+110000
+],
+[
+-2,
+30,
+"Rwanda",
+70000,
+91000
+],
+[
+13,
+-2,
+"Burkina Faso",
+120000,
+86000
+],
+[
+-10,
+-55,
+"Brazil",
+170000,
+110000
+],
+[
+6,
+12,
+"Cameroon",
+87000,
+330000
+],
+[
+15,
+100,
+"Thailand",
+170000,
+2e+05
+],
+[
+8,
+-2,
+"Ghana",
+190000,
+280000
+],
+[
+8,
+-5,
+"CÃ´te d'Ivoire",
+250000,
+320000
+],
+[
+0,
+25,
+"Congo, the Democratic Republic of the",
+430000,
+550000
+],
+[
+-15,
+30,
+"Zambia",
+4e+05,
+490000
+],
+[
+8,
+38,
+"Ethiopia",
+490000,
+560000
+],
+[
+-13.5,
+34,
+"Malawi",
+550000,
+720000
+],
+[
+-18.25,
+35,
+"Mozambique",
+260000,
+1200000
+] 
+];
+data.addColumn('number','Latitude');
+data.addColumn('number','Longitude');
+data.addColumn('string','Country');
+data.addColumn('number','YR2000');
+data.addColumn('number','YR2015');
+data.addRows(datajson);
+return(data);
+}
+ 
+// jsDrawChart
+function drawChartEQ() {
+var data = gvisDataEQ();
+var options = {};
+options["width"] = 556;
+options["height"] = 347;
+options["displayMode"] = "Markers";
+options["colorAxis"] = {colors:['purple', 'red', 'orange', 'grey', 'pink']};
+options["backgroundColor"] = "lightblue";
+
+
+    var chart = new google.visualization.GeoChart(
+    document.getElementById('EQ')
+    );
+    chart.draw(data,options);
+    
+
+}
+  
+ 
+// jsDisplayChart
+(function() {
+var pkgs = window.__gvisPackages = window.__gvisPackages || [];
+var callbacks = window.__gvisCallbacks = window.__gvisCallbacks || [];
+var chartid = "geochart";
+  
+// Manually see if chartid is in pkgs (not all browsers support Array.indexOf)
+var i, newPackage = true;
+for (i = 0; newPackage && i < pkgs.length; i++) {
+if (pkgs[i] === chartid)
+newPackage = false;
+}
+if (newPackage)
+  pkgs.push(chartid);
+  
+// Add the drawChart function to the global list of callbacks
+callbacks.push(drawChartEQ);
+})();
+function displayChartEQ() {
+  var pkgs = window.__gvisPackages = window.__gvisPackages || [];
+  var callbacks = window.__gvisCallbacks = window.__gvisCallbacks || [];
+  window.clearTimeout(window.__gvisLoad);
+  // The timeout is set to 100 because otherwise the container div we are
+  // targeting might not be part of the document yet
+  window.__gvisLoad = setTimeout(function() {
+  var pkgCount = pkgs.length;
+  google.load("visualization", "1", { packages:pkgs, callback: function() {
+  if (pkgCount != pkgs.length) {
+  // Race condition where another setTimeout call snuck in after us; if
+  // that call added a package, we must not shift its callback
+  return;
+}
+while (callbacks.length > 0)
+callbacks.shift()();
+} });
+}, 100);
+}
+ 
+// jsFooter
+</script>
+ 
+<!-- jsChart -->  
+<script type="text/javascript" src="https://www.google.com/jsapi?callback=displayChartEQ"></script>
+ 
+<!-- divChart -->
+  
+<div id="EQ" 
+  style="width: 556; height: 347;">
+</div>
+ <div><span>Data: Twentyfirst_Cent &#8226; Chart ID: <a href="Chart_EQ.html">EQ</a> &#8226; <a href="https://github.com/mages/googleVis">googleVis-0.6.2</a></span><br /> 
+<!-- htmlFooter -->
+<span> 
+  R version 3.4.2 (2017-09-28) 
+  &#8226; <a href="https://developers.google.com/terms/">Google Terms of Use</a> &#8226; <a href="https://google-developers.appspot.com/chart/interactive/docs/gallery/geochart">Documentation and Data Policy</a>
+</span></div>  
+  
 </blockquote>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">Show_map2 &lt;-<span class="st"> </span><span class="kw">gvisGeoChart</span>(Twentyfirst_Cent, <span class="st">&quot;Lat_Long&quot;</span>, <span class="st">&quot;YR2000&quot;</span>, <span class="st">&quot;YR2015&quot;</span>,<span class="st">&quot;Country&quot;</span>,
                    <span class="dt">options=</span><span class="kw">list</span>(<span class="dt">displayMode=</span><span class="st">&quot;Markers&quot;</span>, 
                    <span class="dt">colorAxis=</span><span class="st">&quot;{colors:['purple', 'red', 'orange', 'grey', 'pink']}&quot;</span>,
                    <span class="dt">backgroundColor=</span><span class="st">&quot;lightblue&quot;</span>), <span class="dt">chartid=</span><span class="st">&quot;EQ&quot;</span>)
 <span class="kw">plot</span>(Show_map2)</code></pre></div>
+
+<title>ER</title>
+<meta http-equiv="content-type" content="text/html;charset=utf-8" />
+<style type="text/css">
+body {
+  color: #444444;
+  font-family: Arial,Helvetica,sans-serif;
+  font-size: 75%;
+  }
+  a {
+  color: #4D87C7;
+  text-decoration: none;
+}
+</style>
+</head>
+<body>
+ <!-- ComboChart generated in R 3.4.2 by googleVis 0.6.2 package -->
+<!-- Sat Nov 04 20:46:17 2017 -->
+
+
+<!-- jsHeader -->
+<script type="text/javascript">
+ 
+// jsData 
+function gvisDataER () {
+var data = new google.visualization.DataTable();
+var datajson =
+[
+ [
+"Peru",
+null,
+null,
+null,
+16000,
+61000
+],
+[
+"Congo",
+null,
+null,
+null,
+2600,
+52000
+],
+[
+"Mexico",
+null,
+null,
+null,
+19000,
+66000
+],
+[
+"Mali",
+null,
+null,
+null,
+7900,
+51000
+],
+[
+"Malaysia",
+null,
+null,
+null,
+100,
+51000
+],
+[
+"Haiti",
+null,
+null,
+null,
+14000,
+110000
+],
+[
+"Botswana",
+null,
+null,
+null,
+2500,
+82000
+],
+[
+"Central African Republic",
+null,
+null,
+null,
+1000,
+68000
+],
+[
+"Rwanda",
+null,
+null,
+null,
+5700,
+70000
+],
+[
+"Burkina Faso",
+null,
+null,
+null,
+15000,
+120000
+],
+[
+"Brazil",
+null,
+null,
+null,
+36000,
+170000
+],
+[
+"Cameroon",
+null,
+null,
+null,
+2400,
+87000
+],
+[
+"Thailand",
+null,
+null,
+null,
+500,
+170000
+],
+[
+"Ghana",
+null,
+null,
+null,
+4900,
+190000
+],
+[
+"CÃ´te d'Ivoire",
+null,
+null,
+null,
+23000,
+250000
+],
+[
+"Congo, the Democratic Republic of the",
+null,
+null,
+null,
+96000,
+430000
+],
+[
+"Zambia",
+null,
+null,
+null,
+32000,
+4e+05
+],
+[
+"Ethiopia",
+null,
+null,
+null,
+23000,
+490000
+],
+[
+"Malawi",
+null,
+null,
+null,
+81000,
+550000
+],
+[
+"Mozambique",
+null,
+null,
+null,
+10000,
+260000
+] 
+];
+data.addColumn('string','Country');
+data.addColumn('number','YR1960');
+data.addColumn('number','YR1970');
+data.addColumn('number','YR1980');
+data.addColumn('number','YR1990');
+data.addColumn('number','YR2000');
+data.addRows(datajson);
+return(data);
+}
+ 
+// jsDrawChart
+function drawChartER() {
+var data = gvisDataER();
+var options = {};
+options["allowHtml"] = true;
+options["seriesType"] = "bars";
+options["bar"] = {groupWidth:'100%'};
+options["title"] = "City Popularity";
+options["series"] = {0: {type:"line"}};
+
+
+    var chart = new google.visualization.ComboChart(
+    document.getElementById('ER')
+    );
+    chart.draw(data,options);
+    
+
+}
+  
+ 
+// jsDisplayChart
+(function() {
+var pkgs = window.__gvisPackages = window.__gvisPackages || [];
+var callbacks = window.__gvisCallbacks = window.__gvisCallbacks || [];
+var chartid = "corechart";
+  
+// Manually see if chartid is in pkgs (not all browsers support Array.indexOf)
+var i, newPackage = true;
+for (i = 0; newPackage && i < pkgs.length; i++) {
+if (pkgs[i] === chartid)
+newPackage = false;
+}
+if (newPackage)
+  pkgs.push(chartid);
+  
+// Add the drawChart function to the global list of callbacks
+callbacks.push(drawChartER);
+})();
+function displayChartER() {
+  var pkgs = window.__gvisPackages = window.__gvisPackages || [];
+  var callbacks = window.__gvisCallbacks = window.__gvisCallbacks || [];
+  window.clearTimeout(window.__gvisLoad);
+  // The timeout is set to 100 because otherwise the container div we are
+  // targeting might not be part of the document yet
+  window.__gvisLoad = setTimeout(function() {
+  var pkgCount = pkgs.length;
+  google.load("visualization", "1", { packages:pkgs, callback: function() {
+  if (pkgCount != pkgs.length) {
+  // Race condition where another setTimeout call snuck in after us; if
+  // that call added a package, we must not shift its callback
+  return;
+}
+while (callbacks.length > 0)
+callbacks.shift()();
+} });
+}, 100);
+}
+ 
+// jsFooter
+</script>
+ 
+<!-- jsChart -->  
+<script type="text/javascript" src="https://www.google.com/jsapi?callback=displayChartER"></script>
+ 
+<!-- divChart -->
+  
+<div id="ER" 
+  style="width: 500; height: automatic;">
+</div>
+ <div><span>Data: data &#8226; Chart ID: <a href="Chart_ER.html">ER</a> &#8226; <a href="https://github.com/mages/googleVis">googleVis-0.6.2</a></span><br /> 
+<!-- htmlFooter -->
+<span> 
+  R version 3.4.2 (2017-09-28) 
+  &#8226; <a href="https://developers.google.com/terms/">Google Terms of Use</a> &#8226; <a href="https://google-developers.appspot.com/chart/interactive/docs/gallery/combochart">Documentation and Data Policy</a>
+</span></div>
+  
 <ul>
 <li>From the map above, we can see that majority of countries where more that 50000 children lost their parents to HIV/AIDS are in African and some that of South American (latin America).</li>
 </ul>
